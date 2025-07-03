@@ -1,0 +1,129 @@
+# Russian translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-07-03 14:08+0300\n"
+"PO-Revision-Date: 2025-07-03 14:08+0300\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ru\n"
+"Language-Team: ru <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: templates/index.html:2
+msgid "Home – Quaternary Journal"
+msgstr ""
+
+#: templates/index.html:6
+msgid "Бюллетень Комиссии по изучению четвертичного периода"
+msgstr ""
+
+#: templates/index.html:7
+msgid "Journal of the Quaternary Period Commission"
+msgstr "Журнал Комиссии по Четвертичному Периоду"
+
+#: templates/index.html:9
+msgid "View Latest Issue"
+msgstr "Посмотреть последний выпуск"
+
+#: templates/index.html:18
+msgid "About the Journal"
+msgstr "О журнале"
+
+#: templates/index.html:20
+msgid ""
+"The \"Бюллетень Комиссии по изучению четвертичного периода\" publishes "
+"peer-reviewed research on Pleistocene and Holocene studies."
+msgstr ""
+
+#: templates/index.html:23
+msgid ""
+"Established by the Commission of the Russian Academy of Sciences, the "
+"journal advances Quaternary research in Russia and beyond."
+msgstr ""
+
+#: templates/index.html:31 templates/index.html:46
+msgid "Submit"
+msgstr "Заявка на публикацию"
+
+#: templates/index.html:32 templates/index.html:50
+msgid "How to Submit"
+msgstr "Правила подачи рукописи"
+
+#: templates/index.html:33 templates/index.html:54
+msgid "Rules"
+msgstr "Правила"
+
+#: templates/index.html:34 templates/index.html:58
+msgid "Terms of Use"
+msgstr "Правила пользования сайтом"
+
+#: templates/index.html:35 templates/index.html:62
+msgid "Ethics"
+msgstr "Этика научных публикаций"
+
+#: templates/index.html:36 templates/index.html:66
+msgid "Review Rules"
+msgstr "Правила просмотра"
+
+#: templates/index.html:37 templates/index.html:70 templates/index.html:71
+msgid "Editorial Board"
+msgstr "Редакционная коллегия"
+
+#: templates/index.html:38 templates/index.html:74
+msgid "Authors"
+msgstr "Авторы"
+
+#: templates/index.html:39 templates/index.html:78
+msgid "License Agreement"
+msgstr "Лицензионное соглашение"
+
+#: templates/index.html:47
+msgid "Instructions on how to submit your manuscript will be added here."
+msgstr "Инструкции о том, как подать рукопись, будут добавлены здесь."
+
+#: templates/index.html:51
+msgid "Details for authors about the submission process."
+msgstr "Подробная информация для авторов о процессе подачи заявок."
+
+#: templates/index.html:55
+msgid "Publication rules and guidelines."
+msgstr "Правила и рекомендации публикации."
+
+#: templates/index.html:59
+msgid "Legal terms and user agreement details."
+msgstr "Юридические условия и подробности пользовательского соглашения."
+
+#: templates/index.html:63
+msgid "Publication ethics and responsibilities."
+msgstr "Публикационная этика и ответственность."
+
+#: templates/index.html:67
+msgid "Peer review process and guidelines."
+msgstr "Процесс и руководящие принципы рецензирования."
+
+#: templates/index.html:71
+msgid "Meet our editors on the"
+msgstr "Познакомьтесь с нашими редакторами на"
+
+#: templates/index.html:71
+msgid "page."
+msgstr "страница."
+
+#: templates/index.html:75
+msgid "Information for contributing authors."
+msgstr "Информация для авторов."
+
+#: templates/index.html:79
+msgid "Copyright and licensing terms."
+msgstr "Условия авторского права и лицензирования."
+
