@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}{{ _('Submit Manuscript') }}{% endblock %}
+
+{% block content %}
+<div class="bg-white p-5 rounded shadow-sm">
+  <h2>{{ _('Submit Your Manuscript') }}</h2>
+  <p>
+    {{ _('To submit your manuscript, please email it in DOCX or PDF format to:') }}
+    <strong><a href="mailto:quaternary@ginras.ru">quaternary@ginras.ru</a></strong>
+  </p>
+
+  <p>{{ _('Please make sure your manuscript follows the author guidelines.') }}</p>
+
+  <a href="/static/guidelines.pdf" class="btn btn-outline-primary mt-3">
+    {{ _('Download Author Guidelines') }}
+  </a>
+</div>
+{% endblock %}
