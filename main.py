@@ -31,6 +31,10 @@ def register():
         ...
     return render_template("register.html")
 
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
 @app.route("/submit")
 def submit():
     return render_template("submit.html")

@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block title %}{{ _('About – Quaternary Journal') }}{% endblock %}
+{% block content %}
+    <div class="bg-white p-5 rounded shadow-sm mb-5">
+        <h2>{{ _('About the Journal') }}</h2>
+        <p>{{ _(
+            'Bulletin of the Commission for Study of the Quaternary (BCSQ) '
+            '(Rus. Бюллетень Комиссии по изучению четвертичного периода (БКИЧП), '
+            'Fr. Bulletin de la Commission pour l\'Etude du Quaternaire) – is an '
+            'annual scientific publication (serial title), publishing papers, '
+            'reviews, conference materials and a chronicle about the Quaternary '
+            'geological period (the Quaternary System). The Bulletin covers '
+            'fundamental, global and regional problems of the Quaternary Science. '
+            'Papers related to all aspects of quaternary geology, stratigraphy, '
+            'geotectonic, sedimentology, paleontology, paleogeography, '
+            'geomorphology, permafrost study, paleo soil study, archeology, etс. '
+            'The Bulletin is fully open access with double-blind peer-reviewed '
+            'publications.<br><br>'
+
+            'The Bulletin founded by the Commission for the Study of the Quaternary '
+            'of the Academy of Sciences of the USSR (1929) as a professional '
+            'academic publication. It is the longest-running journal related to the '
+            'Quaternary research. There were 1/3 releases of the Bulletin published '
+            'almost annually, 75 issues, available in the online archive. The '
+            'founders of the bulletin are the Commission for the Study of the '
+            'Quaternary Period of the Russian Academy of Sciences (RAS) and the '
+            'Geological Institute RAS. The Bulletin is included to the Russian '
+            'Science Citation Index (Elibrary) and is in a process of registration '
+            'to the international bibliographic database (Scopus). Printed by the '
+            'GEOS Publishing House, print ISSN 0366-0907, and library heading: The '
+            'Quaternary System.<br><br>'
+
+            'The editorial office is located in the Geological Institute RAS, the '
+            'Bulletin website with information in Russian and English. The '
+            'editorial board includes leading scientists; the chief editor is the '
+            'chairman of the Commission for the Study of the Quaternary period Dr. '
+            'Yu.A. Lavrushin. Since 2018, papers published with English summary, '
+            'keywords and bibliography, some articles published in English with an '
+            'expanded Russian summary.'
+        ) }}</p>
+    </div>
+
+    <div class="bg-white p-5 rounded shadow-sm">
+        <h2>{{ _('Main editors') }}</h2>
+        <ul>
+            <li>{{ _('Дегтярёв Кирилл Евгеньевич — главный редактор, председатель Комиссии по изучению четвертичного периода') }}</li>
+            <li>{{ _('Тесаков Алексей Сергеевич — заместитель главного редатора') }}</li>
+            <li>{{ _('Фролов Павел Дмитриевич — учёный секретарь') }}</li>
+            <li>{{ _('Лаврушин Юрий Александрович — ГИН РАН') }}</li>
+            <li>{{ _('Панин Андрей Валерьевич — ИГ РАН') }}</li>
+            <li>{{ _('Застрожнов Андрей Станиславович — Институт Карпинского') }}</li>
+            <li>{{ _('Зыкин, Владимир Сергеевич — НГУ') }}</li>
+            <li>{{ _('Draženko Nenadić — Белградский университет') }}</li>
+            <li>{{ _('Thijs van Kolfschoten — Лейденский университет') }}</li>
+        </ul>
+    </div>
+{% endblock %}
