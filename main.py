@@ -35,6 +35,7 @@ def register():
 def about():
     return render_template("about.html")
 
+# Sidebar (index page)
 @app.route("/submit")
 def submit():
     return render_template("submit.html")
