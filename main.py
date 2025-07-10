@@ -24,6 +24,10 @@ def inject_locale():
 def index():
     return render_template('index.html')
 
+@app.route("/password_reset")
+def password_reset():
+    return render_template("password_reset.html")
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
