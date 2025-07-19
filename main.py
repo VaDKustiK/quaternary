@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request
 from flask_babel import Babel
+from sqlalchemy.orm import Session
+from tools.archive_scraper import Issue, init_db
 
 app = Flask(__name__)
 # Configuration for Babel (i18n)
@@ -35,9 +37,35 @@ def register():
         ...
     return render_template("register.html")
 
+# Navbar
 @app.route("/about")
 def about():
     return render_template("about.html")
+
+@app.route('/issues')
+def archive():
+    engine = init_db()
+    session = Session(bind=engine)
+
+    issues = session.query(Issue).order_by(Issue.year.desc()).all()
+
+    grouped_issues = {}
+    for issue in issues:
+        grouped_issues.setdefault(issue.year, []).append(issue)
+
+    return render_template('archive.html', grouped_issues=grouped_issues)
+
+@app.route('/issues/<int:issue_id>')
+def issue_detail(issue_id):
+    engine = init_db()
+    session = Session(bind=engine)
+
+    issue = session.query(Issue).get(issue_id)
+    if not issue:
+        return "Issue not found", 404
+
+    return render_template('issue_detail.html', issue=issue)
+
 
 # Sidebar (index page)
 @app.route("/submit")
