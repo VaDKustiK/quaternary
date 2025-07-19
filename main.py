@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 from flask_babel import Babel
-from sqlalchemy.orm import Session
+from sqlalchemy.orm import Session, sessionmaker
 from tools.archive_scraper import Issue, init_db
 
 app = Flask(__name__)
@@ -22,10 +22,12 @@ babel.init_app(app, locale_selector=get_locale)
 def inject_locale():
     return {'get_locale': get_locale}
 
+engine = init_db()
+SessionLocal = sessionmaker(bind=engine)
+
 @app.route('/')
 def index():
-    engine = init_db()
-    session = Session(bind=engine)
+    session = SessionLocal()
     latest_issue = session.query(Issue).order_by(Issue.year.desc(), Issue.id.desc()).first()
     return render_template('index.html', latest_issue=latest_issue)
 
@@ -47,9 +49,7 @@ def about():
 
 @app.route('/issues')
 def archive():
-    engine = init_db()
-    session = Session(bind=engine)
-
+    session = SessionLocal()
     issues = session.query(Issue).order_by(Issue.year.desc()).all()
 
     grouped_issues = {}
@@ -60,15 +60,12 @@ def archive():
 
 @app.route('/issues/<int:issue_id>')
 def issue_detail(issue_id):
-    engine = init_db()
-    session = Session(bind=engine)
-
+    session = SessionLocal()
     issue = session.query(Issue).get(issue_id)
     if not issue:
         return "Issue not found", 404
 
     return render_template('issue_detail.html', issue=issue)
-
 
 # Sidebar (index page)
 @app.route("/submit")
