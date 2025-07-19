@@ -5,7 +5,12 @@
     <h1 class="display-4">{{ _('Бюллетень Комиссии по изучению четвертичного периода') }}</h1>
     <p class="lead">{{ _('Journal of the Quaternary Period Commission') }}</p>
     <hr class="my-4">
-    <a class="btn btn-primary btn-lg" href="/issues/81">{{ _('View Latest Issue') }}</a>
+    {% if latest_issue %}
+    <a class="btn btn-primary btn-lg" href="{{ url_for('issue_detail', issue_id=latest_issue.id) }}">{{ _('View Latest Issue') }}</a>
+    {% else %}
+      <p class="text-muted">{{ _('No issues available yet.') }}</p>
+    {% endif %}
+
   </div>
 
   <!-- About -->

@@ -24,7 +24,10 @@ def inject_locale():
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    engine = init_db()
+    session = Session(bind=engine)
+    latest_issue = session.query(Issue).order_by(Issue.year.desc(), Issue.id.desc()).first()
+    return render_template('index.html', latest_issue=latest_issue)
 
 @app.route("/password_reset")
 def password_reset():
