@@ -1,0 +1,141 @@
+{% extends "base.html" %}
+{% block title %}{{ _('Profile – Quaternary Journal') }}{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="/static/register.css">
+
+<div class="profile-container bg-white shadow-sm p-4 p-md-5 rounded mx-auto mt-4">
+  <h2 class="text-center mb-4">{{ _('Your Profile') }}</h2>
+  <form method="post" action="/profile">
+
+    <div class="mb-3">
+      <label for="email" class="form-label">{{ _('Email') }}</label>
+      <input type="email" class="form-control" id="email" name="email" required>
+    </div>
+
+    <div class="row g-3">
+      <div class="col-md-6">
+        <label for="surname" class="form-label">{{ _('Surname') }}</label>
+        <input type="text" class="form-control" id="surname" name="surname" required>
+      </div>
+      <div class="col-md-6">
+        <label for="surname_en" class="form-label">{{ _('Surname (en)') }}</label>
+        <input type="text" class="form-control" id="surname_en" name="surname_en" required>
+      </div>
+    </div>
+
+    <div class="row g-3 mt-3">
+      <div class="col-md-6">
+        <label for="name" class="form-label">{{ _('Name') }}</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+      </div>
+      <div class="col-md-6">
+        <label for="name_en" class="form-label">{{ _('Name (en)') }}</label>
+        <input type="text" class="form-control" id="name_en" name="name_en" required>
+      </div>
+    </div>
+
+    <div class="mb-3 mt-3">
+      <label for="patronymic" class="form-label">{{ _('Patronymic') }}</label>
+      <input type="text" class="form-control" id="patronymic" name="patronymic">
+    </div>
+
+    <div class="row g-3">
+      <div class="col-md-6">
+        <label for="orcid" class="form-label">{{ _('ORCID') }}</label>
+        <input type="text" class="form-control" id="orcid" name="orcid">
+      </div>
+      <div class="col-md-6">
+        <label for="internet_profile" class="form-label">{{ _('Internet profile (URL)') }}</label>
+        <input type="text" class="form-control" id="internet_profile" name="internet_profile">
+      </div>
+    </div>
+
+    <div class="row g-3 mt-3">
+      <div class="col-md-6">
+        <label for="degrees" class="form-label">{{ _('Degrees held') }}</label>
+        <input type="text" class="form-control" id="degrees" name="degrees">
+      </div>
+      <div class="col-md-6">
+        <label for="degrees_en" class="form-label">{{ _('Degrees held (en)') }}</label>
+        <input type="text" class="form-control" id="degrees_en" name="degrees_en">
+      </div>
+    </div>
+
+    <div class="row g-3 mt-3">
+      <div class="col-md-6">
+        <label for="occupation" class="form-label">{{ _('Occupation') }}</label>
+        <input type="text" class="form-control" id="occupation" name="occupation">
+      </div>
+      <div class="col-md-6">
+        <label for="occupation_en" class="form-label">{{ _('Occupation (en)') }}</label>
+        <input type="text" class="form-control" id="occupation_en" name="occupation_en">
+      </div>
+    </div>
+
+    <div class="row g-3 mt-3">
+      <div class="col-md-6">
+        <label for="position" class="form-label">{{ _('Position, department, place of work') }}</label>
+        <input type="text" class="form-control" id="position" name="position">
+      </div>
+      <div class="col-md-6">
+        <label for="position_en" class="form-label">{{ _('Position, department, place of work (en)') }}</label>
+        <input type="text" class="form-control" id="position_en" name="position_en">
+      </div>
+    </div>
+
+    <div class="row g-3 mt-3">
+      <div class="col-md-6">
+        <label for="interests" class="form-label">{{ _('Professional interests') }}</label>
+        <input type="text" class="form-control" id="interests" name="interests">
+      </div>
+      <div class="col-md-6">
+        <label for="interests_en" class="form-label">{{ _('Professional interests (en)') }}</label>
+        <input type="text" class="form-control" id="interests_en" name="interests_en">
+      </div>
+    </div>
+
+    <div class="row g-3 mt-3">
+      <div class="col-md-6">
+        <label for="city" class="form-label">{{ _('City') }}</label>
+        <input type="text" class="form-control" id="city" name="city">
+      </div>
+      <div class="col-md-6">
+        <label for="city_en" class="form-label">{{ _('City (en)') }}</label>
+        <input type="text" class="form-control" id="city_en" name="city_en">
+      </div>
+    </div>
+
+    <div class="row g-3 mt-3">
+      <div class="col-md-6">
+        <label for="address" class="form-label">{{ _('Address') }}</label>
+        <input type="text" class="form-control" id="address" name="address">
+      </div>
+      <div class="col-md-6">
+        <label for="address_en" class="form-label">{{ _('Address (en)') }}</label>
+        <input type="text" class="form-control" id="address_en" name="address_en">
+      </div>
+    </div>
+
+    <div class="row g-3 mt-3">
+      <div class="col-md-6">
+        <label for="country" class="form-label">{{ _('Country') }}</label>
+        <input type="text" class="form-control" id="country" name="country">
+      </div>
+      <div class="col-md-6">
+        <label for="state" class="form-label">{{ _('State/Province') }}</label>
+        <input type="text" class="form-control" id="state" name="state">
+      </div>
+    </div>
+
+    <div class="mt-4">
+      <button type="submit" class="btn btn-primary w-100">{{ _('Save changes') }}</button>
+    </div>
+
+  </form>
+
+  <p class="text-end mt-3">
+    <a href="/change_password">{{ _('Change password') }}</a>
+  </p>
+</div>
+{% endblock %}
