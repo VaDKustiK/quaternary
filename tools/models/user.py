@@ -16,7 +16,6 @@ class User(Base):
 
     orcid = Column(String)
     internet_profile = Column(String)
-
     degrees = Column(String)
     degrees_en = Column(String)
     occupation = Column(String)
@@ -25,7 +24,6 @@ class User(Base):
     position_en = Column(String)
     interests = Column(String)
     interests_en = Column(String)
-
     city = Column(String)
     city_en = Column(String)
     address = Column(String)
