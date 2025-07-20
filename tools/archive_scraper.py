@@ -1,39 +1,15 @@
 import logging
 import requests
 from bs4 import BeautifulSoup
-from sqlalchemy import create_engine, Column, Integer, String
-from sqlalchemy.orm import declarative_base, sessionmaker
+from sqlalchemy.orm import Session
 import re
 
-# Logging setup
+from tools.models.init_db import engine, init_db, SessionLocal
+from tools.models.issue import Issue
+
 logging.basicConfig(level=logging.INFO, format='[%(levelname)s] %(message)s')
-# logging.basicConfig(level=logging.INFO, format='[%(levelname)s] %(message)s') # in case if smth breaks
 logger = logging.getLogger(__name__)
 
-# SQLAlchemy setup
-Base = declarative_base()
-
-class Issue(Base):
-    __tablename__ = 'issues'
-
-    id = Column(Integer, primary_key=True)
-    title = Column(String, nullable=False)
-    year = Column(Integer, nullable=False)
-    pdf_url = Column(String, nullable=False)
-    detail_url = Column(String, nullable=False)
-    content_html = Column(String, nullable=True)
-
-    def __repr__(self):
-        return f"<Issue(title='{self.title}', year={self.year})>"
-
-# Database init
-def init_db():
-    engine = create_engine('sqlite:///issues.db')
-    Base.metadata.create_all(engine)
-    logger.info("Database initialized.")
-    return engine
-
-# Scraper
 def scrape_issues():
     base_url = 'http://www.ginras.ru/library/papers.php?m=qt&p=0&l=30000'
     logger.info(f"Requesting main page: {base_url}")
@@ -44,11 +20,9 @@ def scrape_issues():
     issue_spans = soup.select('span.txt')
     logger.info(f"Found {len(issue_spans)} issue blocks.")
 
-    engine = init_db()
-    Session = sessionmaker(bind=engine)
-    session = Session()
+    init_db()
+    session = SessionLocal()
 
-    # ⚠️ Wipe existing issues
     session.query(Issue).delete()
     logger.info("Deleted all previous issues.")
 
@@ -64,8 +38,6 @@ def scrape_issues():
                 pdf_url = 'http://www.ginras.ru' + pdf_url
 
             title = link.get_text(separator=' ', strip=True)
-
-            # Extract year from title
             match = re.search(r'(\d{4})', title)
             year = int(match.group(1)) if match else 0
 

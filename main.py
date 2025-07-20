@@ -1,7 +1,8 @@
 from flask import Flask, render_template, request
 from flask_babel import Babel
-from sqlalchemy.orm import Session, sessionmaker
-from tools.archive_scraper import Issue, init_db
+from sqlalchemy.orm import Session
+from tools.models.init_db import engine, SessionLocal, init_db
+from tools.models.issue import Issue
 
 app = Flask(__name__)
 # Configuration for Babel (i18n)
@@ -22,8 +23,7 @@ babel.init_app(app, locale_selector=get_locale)
 def inject_locale():
     return {'get_locale': get_locale}
 
-engine = init_db()
-SessionLocal = sessionmaker(bind=engine)
+init_db()  # create tables once before running the app
 
 @app.route('/')
 def index():
@@ -31,16 +31,16 @@ def index():
     latest_issue = session.query(Issue).order_by(Issue.year.desc(), Issue.id.desc()).first()
     return render_template('index.html', latest_issue=latest_issue)
 
-@app.route("/password_reset")
-def password_reset():
-    return render_template("password_reset.html")
-
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
-        # Process form data (validate, save user, etc.)
+        # registration logic here
         ...
     return render_template("register.html")
+
+@app.route("/password_reset")
+def password_reset():
+    return render_template("password_reset.html")
 
 # Navbar
 @app.route("/about")
