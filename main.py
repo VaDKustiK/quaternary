@@ -101,6 +101,10 @@ def register():
 def password_reset():
     return render_template("password_reset.html")
 
+@app.route("/profile")
+def profile():
+    return render_template("profile.html")
+
 # Navbar
 @app.route("/about")
 def about():
