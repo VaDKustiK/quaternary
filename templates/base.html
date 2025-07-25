@@ -72,6 +72,11 @@
       <ul class="list-group">
         <li class="list-group-item"><a href="/profile">{{ _('Profile') }}</a></li>
         <li class="list-group-item"><a href="/my_publications">{{ _('My Publications') }}</a></li>
+
+        {% if session.get("is_admin") %}
+          <li class="list-group-item"><a href="/admin">{{ _('Admin Panel') }}</a></li>
+        {% endif %}
+
         <li class="list-group-item"><a href="/logout">{{ _('Log out') }}</a></li>
       </ul>
     {% else %}

@@ -29,11 +29,13 @@ def get_locale():
         return lang
     return request.accept_languages.best_match(app.config['BABEL_SUPPORTED_LOCALES'])
 
+
 babel.init_app(app, locale_selector=get_locale)
 
 @app.context_processor
 def inject_locale():
     return {'get_locale': get_locale}
+
 
 init_db()  # creating tables once before running the app
 
@@ -51,11 +53,13 @@ def admin_required(f):
         return f(*args, **kwargs)
     return decorated_function
 
+
 @app.route('/')
 def index():
     session = SessionLocal()
     latest_issue = session.query(Issue).order_by(Issue.year.desc(), Issue.id.desc()).first()
     return render_template('index.html', latest_issue=latest_issue)
+
 
 @app.route("/login", methods=["POST"])
 def login():
@@ -67,6 +71,7 @@ def login():
     if user and check_password_hash(user.password_hash, password):
         session["user_id"] = user.id
         session["user_name"] = user.name
+        session["is_admin"] = user.is_admin
         flash("Successfully logged in!", "success")
 
         return redirect(request.referrer or url_for("index"))
@@ -74,11 +79,13 @@ def login():
         flash("Invalid email or password", "danger")
         return redirect(request.referrer or url_for("index"))
 
+
 @app.route("/logout")
 def logout():
     session.clear()
     flash("You have been logged out", "success")
     return redirect(url_for("index"))
+
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
@@ -113,18 +120,22 @@ def register():
 
     return render_template("register.html")
 
+
 @app.route("/password_reset")
 def password_reset():
     return render_template("password_reset.html")
+
 
 @app.route("/profile")
 def profile():
     return render_template("profile.html")
 
+
 # Navbar
 @app.route("/about")
 def about():
     return render_template("about.html")
+
 
 @app.route('/issues')
 def archive():
@@ -137,6 +148,7 @@ def archive():
 
     return render_template('archive.html', grouped_issues=grouped_issues)
 
+
 @app.route('/issues/<int:issue_id>')
 def issue_detail(issue_id):
     session = SessionLocal()
@@ -146,16 +158,19 @@ def issue_detail(issue_id):
 
     return render_template('issue_detail.html', issue=issue)
 
+
 # Sidebar (index page)
 @app.route("/submit")
 def submit():
     return render_template("submit.html")
+
 
 # Admin panel
 @app.route("/admin")
 @admin_required
 def admin_panel():
     return render_template("admin/admin_panel.html")
+
 
 @app.before_request
 def update_last_seen():
@@ -166,6 +181,7 @@ def update_last_seen():
             user.last_seen = datetime.now(timezone.utc)
             db.commit()
 
+
 @app.route("/admin/online")
 @admin_required
 def iframe_online():
@@ -173,6 +189,7 @@ def iframe_online():
     active_threshold = datetime.now(timezone.utc) - timedelta(minutes=5)
     active_users = db.query(User).filter(User.last_seen >= active_threshold).count()
     return render_template("admin/online.html", active_users=active_users)
+
 
 @app.route("/admin/users")
 @admin_required
@@ -185,6 +202,7 @@ def admin_users():
         (User.email.ilike(f"%{q}%"))
     ).all()
     return render_template("admin/users.html", users=users, q=q)
+
 
 @app.route("/admin/issues")
 @admin_required
