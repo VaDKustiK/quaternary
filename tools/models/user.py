@@ -1,4 +1,5 @@
-from sqlalchemy import Column, Integer, String, Boolean
+from datetime import datetime, timezone
+from sqlalchemy import Column, DateTime, Integer, String, Boolean
 from tools.models.base import Base
 
 class User(Base):
@@ -31,4 +32,5 @@ class User(Base):
     country = Column(String)
     state = Column(String)
 
+    last_seen = Column(DateTime, default=lambda: datetime.now(timezone.utc))
     is_admin = Column(Boolean, default=False)

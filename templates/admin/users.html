@@ -1,0 +1,28 @@
+{% extends "iframe_base.html" %}
+{% block title %}Users{% endblock %}
+{% block content %}
+<h4>Users</h4>
+<form class="mb-3">
+  <input type="text" name="q" value="{{ q }}" placeholder="Search users..." class="form-control bg-dark text-light border-secondary">
+</form>
+<table class="table table-dark table-striped table-bordered">
+  <thead class="thead-light">
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Is Admin</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for user in users %}
+    <tr>
+      <td>{{ user.id }}</td>
+      <td>{{ user.name }} {{ user.surname }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ "✅" if user.is_admin else "❌" }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

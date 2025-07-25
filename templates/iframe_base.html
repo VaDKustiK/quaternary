@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="bg-dark text-light" style="font-family: 'YourFontName', sans-serif;">
+    <div class="container p-3">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

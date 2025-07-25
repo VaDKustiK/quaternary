@@ -9,6 +9,8 @@ from tools.models.user import User
 from dotenv import load_dotenv
 from flask import session
 from werkzeug.security import check_password_hash
+from functools import wraps
+from datetime import datetime, timezone, timedelta
 
 app = Flask(__name__)
 
@@ -34,6 +36,20 @@ def inject_locale():
     return {'get_locale': get_locale}
 
 init_db()  # creating tables once before running the app
+
+def admin_required(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        if not session.get("user_id"):
+            flash("You need to log in", "warning")
+            return redirect(url_for("index"))
+        db = SessionLocal()
+        user = db.query(User).get(session["user_id"])
+        if not user or not user.is_admin:
+            flash("Access denied", "danger")
+            return redirect(url_for("index"))
+        return f(*args, **kwargs)
+    return decorated_function
 
 @app.route('/')
 def index():
@@ -134,6 +150,49 @@ def issue_detail(issue_id):
 @app.route("/submit")
 def submit():
     return render_template("submit.html")
+
+# Admin panel
+@app.route("/admin")
+@admin_required
+def admin_panel():
+    return render_template("admin/admin_panel.html")
+
+@app.before_request
+def update_last_seen():
+    if "user_id" in session:
+        db = SessionLocal()
+        user = db.query(User).get(session["user_id"])
+        if user:
+            user.last_seen = datetime.now(timezone.utc)
+            db.commit()
+
+@app.route("/admin/online")
+@admin_required
+def iframe_online():
+    db = SessionLocal()
+    active_threshold = datetime.now(timezone.utc) - timedelta(minutes=5)
+    active_users = db.query(User).filter(User.last_seen >= active_threshold).count()
+    return render_template("admin/online.html", active_users=active_users)
+
+@app.route("/admin/users")
+@admin_required
+def admin_users():
+    q = request.args.get("q", "")
+    db = SessionLocal()
+    users = db.query(User).filter(
+        (User.name.ilike(f"%{q}%")) |
+        (User.surname.ilike(f"%{q}%")) |
+        (User.email.ilike(f"%{q}%"))
+    ).all()
+    return render_template("admin/users.html", users=users, q=q)
+
+@app.route("/admin/issues")
+@admin_required
+def admin_issues():
+    db = SessionLocal()
+    issues = db.query(Issue).order_by(Issue.year.desc()).all()
+    return render_template("admin/issues.html", issues=issues)
+
 
 if __name__ == '__main__':
     app.run(debug=True)

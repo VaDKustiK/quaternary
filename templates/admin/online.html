@@ -1,0 +1,6 @@
+{% extends "iframe_base.html" %}
+{% block title %}Online Users{% endblock %}
+{% block content %}
+<h4>Online Users</h4>
+<p class="lead">{{ active_users }} user{{ 's' if active_users != 1 else '' }} online now.</p>
+{% endblock %}
