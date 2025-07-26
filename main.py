@@ -195,13 +195,30 @@ def iframe_online():
 @admin_required
 def admin_users():
     q = request.args.get("q", "")
+    filter_admin = request.args.get("filter_admin")
+    sort = request.args.get("sort", "newest")
     db = SessionLocal()
-    users = db.query(User).filter(
-        (User.name.ilike(f"%{q}%")) |
-        (User.surname.ilike(f"%{q}%")) |
-        (User.email.ilike(f"%{q}%"))
-    ).all()
-    return render_template("admin/users.html", users=users, q=q)
+    query = db.query(User)
+
+    if q:
+        query = query.filter(
+            (User.name.ilike(f"%{q}%")) |
+            (User.surname.ilike(f"%{q}%")) |
+            (User.email.ilike(f"%{q}%"))
+        )
+
+    if filter_admin == "true":
+        query = query.filter(User.is_admin == True)
+    elif filter_admin == "false":
+        query = query.filter(User.is_admin == False)
+
+    if sort == "oldest":
+        query = query.order_by(User.created_at.asc())
+    else:
+        query = query.order_by(User.created_at.desc())
+
+    users = query.all()
+    return render_template("admin/users.html", users=users, q=q, filter_admin=filter_admin, sort=sort)
 
 
 @app.route("/admin/issues")

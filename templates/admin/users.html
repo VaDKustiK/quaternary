@@ -1,28 +1,78 @@
 {% extends "iframe_base.html" %}
 {% block title %}Users{% endblock %}
 {% block content %}
-<h4>Users</h4>
-<form class="mb-3">
-  <input type="text" name="q" value="{{ q }}" placeholder="Search users..." class="form-control bg-dark text-light border-secondary">
-</form>
-<table class="table table-dark table-striped table-bordered">
-  <thead class="thead-light">
-    <tr>
-      <th>ID</th>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Is Admin</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for user in users %}
-    <tr>
-      <td>{{ user.id }}</td>
-      <td>{{ user.name }} {{ user.surname }}</td>
-      <td>{{ user.email }}</td>
-      <td>{{ "✅" if user.is_admin else "❌" }}</td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
+
+<div class="card shadow-sm border-0 mb-4">
+  <div class="card-body">
+    <h4 class="card-title mb-4">Users</h4>
+
+    <form method="get" class="row g-2 align-items-center mb-4">
+      <!-- Search input -->
+      <div class="col-md-4">
+        <div class="input-group">
+          <input type="text" name="q" value="{{ q }}" class="form-control" placeholder="Search by name, surname, or email">
+          <button class="btn btn-outline-secondary" type="submit">
+            <i class="bi bi-search"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Filter admin -->
+      <div class="col-md-3">
+        <select name="filter_admin" class="form-select">
+          <option value="">All Users</option>
+          <option value="true" {% if filter_admin == 'true' %}selected{% endif %}>Admins</option>
+          <option value="false" {% if filter_admin == 'false' %}selected{% endif %}>Non-admins</option>
+        </select>
+      </div>
+
+      <!-- Sort by -->
+      <div class="col-md-3">
+        <select name="sort" class="form-select">
+          <option value="newest" {% if sort == 'newest' %}selected{% endif %}>Newest First</option>
+          <option value="oldest" {% if sort == 'oldest' %}selected{% endif %}>Oldest First</option>
+        </select>
+      </div>
+
+      <!-- Submit -->
+      <div class="col-md-2">
+        <button type="submit" class="btn btn-primary w-100">Apply</button>
+      </div>
+    </form>
+
+    <div class="table-responsive rounded overflow-hidden">
+      <table class="table table-hover table-striped table-bordered align-middle mb-0">
+        <thead class="table-light text-dark">
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Admin</th>
+            <th>Created</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for user in users %}
+          <tr class="clickable-row" data-href="/admin/users/{{ user.id }}" style="cursor: pointer;">
+            <td>{{ user.id }}</td>
+            <td>{{ user.name }} {{ user.surname }}</td>
+            <td>{{ user.email }}</td>
+            <td class="text-center">
+              {% if user.is_admin %}
+                <span class="badge bg-success">Yes</span>
+              {% else %}
+                <span class="badge bg-secondary">No</span>
+              {% endif %}
+            </td>
+            <td>{{ user.created_at.strftime("%d.%m.%Y") if user.created_at else "" }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script src="/static/admin_panel.js"></script>
+
 {% endblock %}

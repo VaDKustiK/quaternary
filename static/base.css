@@ -155,3 +155,7 @@ footer a:hover {
     border: none;
     background-color: transparent;
 }
+
+.clickable-row:hover {
+  background-color: rgba(0, 119, 182, 0.15) !important;
+}

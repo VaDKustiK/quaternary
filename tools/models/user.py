@@ -33,4 +33,5 @@ class User(Base):
     state = Column(String)
 
     last_seen = Column(DateTime, default=lambda: datetime.now(timezone.utc))
+    created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc))
     is_admin = Column(Boolean, default=False)
