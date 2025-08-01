@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, request, redirect, url_for, flash
+from flask import Flask, render_template, request, redirect, url_for, flash, abort
 from flask_babel import Babel
 from sqlalchemy.orm import Session
 from tools.models.init_db import engine, SessionLocal, init_db
@@ -227,6 +227,53 @@ def admin_issues():
     db = SessionLocal()
     issues = db.query(Issue).order_by(Issue.year.desc()).all()
     return render_template("admin/issues.html", issues=issues)
+
+
+@app.route("/admin/issues/<int:id>", methods=["GET", "POST"])
+@admin_required
+def edit_issue(id):
+    db = SessionLocal()
+    issue = db.query(Issue).get(id)
+    if not issue:
+        abort(404)
+
+    if request.method == "POST":
+        if "delete" in request.form:
+            db.delete(issue)
+            db.commit()
+            return redirect("/admin/issues")
+        else:
+            issue.title = request.form["title"]
+            issue.year = int(request.form["year"])
+            issue.pdf_url = request.form["pdf_url"]
+            db.commit()
+            return redirect("/admin/issues")
+
+    return render_template("admin/edit_issue.html", issue=issue)
+
+
+@app.route("/admin/issues/new", methods=["GET", "POST"])
+@admin_required
+def new_issue():
+    if request.method == "POST":
+        title = request.form["title"]
+        year = int(request.form["year"])
+        pdf_url = request.form["pdf_url"]
+
+        issue = Issue(
+            title=title,
+            year=year,
+            pdf_url=pdf_url,
+            detail_url="",
+            content_html=""
+        )
+
+        db = SessionLocal()
+        db.add(issue)
+        db.commit()
+        return redirect("/admin/issues")
+
+    return render_template("admin/new_issue.html")
 
 
 if __name__ == '__main__':

@@ -1,12 +1,16 @@
 {% extends "iframe_base.html" %}
 {% block title %}All Issues{% endblock %}
 {% block content %}
-<h4>All Issues</h4>
+<div class="d-flex justify-content-between align-items-center mb-3">
+  <h4 class="mb-0">All Issues</h4>
+  <a href="/admin/issues/new" class="btn btn-success">Add issue</a>
+</div>
+
 <ul class="list-group">
   {% for issue in issues %}
-    <li class="list-group-item border-secondary">
+    <a href="/admin/issues/{{ issue.id }}" class="list-group-item list-group-item-action border-secondary">
       Issue #{{ issue.id }} — {{ issue.title or "Untitled" }} ({{ issue.year }})
-    </li>
+    </a>
   {% endfor %}
 </ul>
 {% endblock %}
