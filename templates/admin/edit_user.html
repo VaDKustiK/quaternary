@@ -1,0 +1,141 @@
+{% extends "iframe_base.html" %}
+{% block title %}{{ _('Edit User') }}{% endblock %}
+{% block content %}
+<div class="card shadow-sm border-0">
+  <div class="card-body">
+    <h4 class="card-title mb-4">{{ _('Edit User') }} #{{ user.id }}</h4>
+
+    <form method="post" class="row g-3">
+      <!-- Basic info -->
+      <div class="col-md-6">
+        <label class="form-label">{{ _('First Name') }}</label>
+        <input type="text" name="name" value="{{ user.name or '' }}" class="form-control">
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">{{ _('Last Name') }}</label>
+        <input type="text" name="surname" value="{{ user.surname or '' }}" class="form-control">
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">{{ _('First Name (EN)') }}</label>
+        <input type="text" name="name_en" value="{{ user.name_en or '' }}" class="form-control">
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">{{ _('Last Name (EN)') }}</label>
+        <input type="text" name="surname_en" value="{{ user.surname_en or '' }}" class="form-control">
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">{{ _('Patronymic') }}</label>
+        <input type="text" name="patronymic" value="{{ user.patronymic or '' }}" class="form-control">
+      </div>
+
+      <!-- Contact -->
+      <div class="col-md-6">
+        <label class="form-label">{{ _('Email') }}</label>
+        <input type="email" name="email" value="{{ user.email or '' }}" class="form-control">
+      </div>
+
+      <!-- Password -->
+      <div class="col-md-6">
+        <label class="form-label">{{ _('New Password') }}</label>
+        <input type="password" name="password" class="form-control" placeholder="{{ _('Leave blank to keep current') }}">
+      </div>
+
+      <!-- ORCID / Internet profile -->
+      <div class="col-md-6">
+        <label class="form-label">ORCID</label>
+        <input type="text" name="orcid" value="{{ user.orcid or '' }}" class="form-control">
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">{{ _('Internet Profile') }}</label>
+        <input type="text" name="internet_profile" value="{{ user.internet_profile or '' }}" class="form-control">
+      </div>
+
+      <!-- Degrees -->
+      <div class="col-md-6">
+        <label class="form-label">{{ _('Degrees') }}</label>
+        <input type="text" name="degrees" value="{{ user.degrees or '' }}" class="form-control">
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">{{ _('Degrees (EN)') }}</label>
+        <input type="text" name="degrees_en" value="{{ user.degrees_en or '' }}" class="form-control">
+      </div>
+
+      <!-- Occupation / Position -->
+      <div class="col-md-6">
+        <label class="form-label">{{ _('Occupation') }}</label>
+        <input type="text" name="occupation" value="{{ user.occupation or '' }}" class="form-control">
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">{{ _('Occupation (EN)') }}</label>
+        <input type="text" name="occupation_en" value="{{ user.occupation_en or '' }}" class="form-control">
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">{{ _('Position') }}</label>
+        <input type="text" name="position" value="{{ user.position or '' }}" class="form-control">
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">{{ _('Position (EN)') }}</label>
+        <input type="text" name="position_en" value="{{ user.position_en or '' }}" class="form-control">
+      </div>
+
+      <!-- Interests -->
+      <div class="col-md-6">
+        <label class="form-label">{{ _('Interests') }}</label>
+        <textarea name="interests" class="form-control">{{ user.interests or '' }}</textarea>
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">{{ _('Interests (EN)') }}</label>
+        <textarea name="interests_en" class="form-control">{{ user.interests_en or '' }}</textarea>
+      </div>
+
+      <!-- Location -->
+      <div class="col-md-6">
+        <label class="form-label">{{ _('City') }}</label>
+        <input type="text" name="city" value="{{ user.city or '' }}" class="form-control">
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">{{ _('City (EN)') }}</label>
+        <input type="text" name="city_en" value="{{ user.city_en or '' }}" class="form-control">
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">{{ _('Address') }}</label>
+        <input type="text" name="address" value="{{ user.address or '' }}" class="form-control">
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">{{ _('Address (EN)') }}</label>
+        <input type="text" name="address_en" value="{{ user.address_en or '' }}" class="form-control">
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">{{ _('Country') }}</label>
+        <input type="text" name="country" value="{{ user.country or '' }}" class="form-control">
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">{{ _('State') }}</label>
+        <input type="text" name="state" value="{{ user.state or '' }}" class="form-control">
+      </div>
+
+      <!-- Admin toggle -->
+      <div class="col-md-12">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="is_admin" id="is_admin"
+            {% if user.is_admin %}checked{% endif %}>
+          <label class="form-check-label" for="is_admin">
+            {{ _('Administrator') }}
+          </label>
+        </div>
+      </div>
+
+      <!-- Save / Back -->
+      <div class="col-12 d-flex gap-2">
+        <button type="submit" class="btn btn-primary">{{ _('Save') }}</button>
+        <a href="{{ url_for('admin_users') }}" class="btn btn-secondary">{{ _('Back') }}</a>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

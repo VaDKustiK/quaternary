@@ -256,6 +256,50 @@ def admin_users():
     return render_template("admin/users.html", users=users, q=q, filter_admin=filter_admin, sort=sort)
 
 
+@app.route("/admin/users/<int:id>", methods=["GET", "POST"])
+@admin_required
+def edit_user(id):
+    db = SessionLocal()
+    user = db.query(User).get(id)
+    if not user:
+        abort(404)
+
+    if request.method == "POST":
+        user.email = request.form.get("email")
+        user.surname = request.form.get("surname")
+        user.surname_en = request.form.get("surname_en")
+        user.name = request.form.get("name")
+        user.name_en = request.form.get("name_en")
+        user.patronymic = request.form.get("patronymic")
+        user.orcid = request.form.get("orcid")
+        user.internet_profile = request.form.get("internet_profile")
+        user.degrees = request.form.get("degrees")
+        user.degrees_en = request.form.get("degrees_en")
+        user.occupation = request.form.get("occupation")
+        user.occupation_en = request.form.get("occupation_en")
+        user.position = request.form.get("position")
+        user.position_en = request.form.get("position_en")
+        user.interests = request.form.get("interests")
+        user.interests_en = request.form.get("interests_en")
+        user.city = request.form.get("city")
+        user.city_en = request.form.get("city_en")
+        user.address = request.form.get("address")
+        user.address_en = request.form.get("address_en")
+        user.country = request.form.get("country")
+        user.state = request.form.get("state")
+        user.is_admin = True if request.form.get("is_admin") == "on" else False
+
+        password = request.form.get("password")
+        if password:
+            user.password_hash = generate_password_hash(password)
+
+        db.commit()
+        flash("User updated successfully!", "success")
+        return redirect(url_for("admin_users"))
+
+    return render_template("admin/edit_user.html", user=user)
+
+
 @app.route("/admin/issues")
 @admin_required
 def admin_issues():
