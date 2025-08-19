@@ -325,6 +325,7 @@ def edit_issue(id):
             issue.title = request.form["title"]
             issue.year = int(request.form["year"])
             issue.pdf_url = request.form["pdf_url"]
+            issue.content_html = request.form.get("content_html", "")
             db.commit()
             return redirect("/admin/issues")
 
@@ -338,13 +339,14 @@ def new_issue():
         title = request.form["title"]
         year = int(request.form["year"])
         pdf_url = request.form["pdf_url"]
+        content_html = request.form.get("content_html", "")
 
         issue = Issue(
             title=title,
             year=year,
             pdf_url=pdf_url,
             detail_url="",
-            content_html=""
+            content_html=content_html
         )
 
         db = SessionLocal()

@@ -19,6 +19,11 @@
     <input type="text" name="pdf_url" class="form-control" value="{{ issue.pdf_url }}">
   </div>
 
+  <div class="mb-3">
+    <label class="form-label">Content of the Issue</label>
+    <textarea name="content_html" class="form-control" rows="5">{{ issue.content_html }}</textarea>
+  </div>
+
   <div class="d-flex justify-content-between">
     <button type="submit" class="btn btn-primary">Save</button>
     <button type="submit" name="delete" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this issue?')">Delete</button>
