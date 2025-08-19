@@ -126,9 +126,44 @@ def password_reset():
     return render_template("password_reset.html")
 
 
-@app.route("/profile")
+@app.route("/profile", methods=["GET", "POST"])
 def profile():
-    return render_template("profile.html")
+    if "user_id" not in session:
+        flash("You need to log in first", "warning")
+        return redirect(url_for("index"))
+
+    db = SessionLocal()
+    user = db.query(User).get(session["user_id"])
+
+    if request.method == "POST":
+        user.email = request.form.get("email")
+        user.surname = request.form.get("surname")
+        user.surname_en = request.form.get("surname_en")
+        user.name = request.form.get("name")
+        user.name_en = request.form.get("name_en")
+        user.patronymic = request.form.get("patronymic")
+        user.orcid = request.form.get("orcid")
+        user.internet_profile = request.form.get("internet_profile")
+        user.degrees = request.form.get("degrees")
+        user.degrees_en = request.form.get("degrees_en")
+        user.occupation = request.form.get("occupation")
+        user.occupation_en = request.form.get("occupation_en")
+        user.position = request.form.get("position")
+        user.position_en = request.form.get("position_en")
+        user.interests = request.form.get("interests")
+        user.interests_en = request.form.get("interests_en")
+        user.city = request.form.get("city")
+        user.city_en = request.form.get("city_en")
+        user.address = request.form.get("address")
+        user.address_en = request.form.get("address_en")
+        user.country = request.form.get("country")
+        user.state = request.form.get("state")
+
+        db.commit()
+        flash("Profile updated successfully!", "success")
+        return redirect(url_for("profile"))
+
+    return render_template("profile.html", user=user)
 
 
 # Navbar

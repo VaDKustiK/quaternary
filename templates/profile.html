@@ -10,121 +10,143 @@
 
     <div class="mb-3">
       <label for="email" class="form-label">{{ _('Email') }}</label>
-      <input type="email" class="form-control" id="email" name="email" required>
+      <input type="email" class="form-control" id="email" name="email"
+             value="{{ user.email or '' }}" required>
     </div>
 
     <div class="row g-3">
       <div class="col-md-6">
         <label for="surname" class="form-label">{{ _('Surname') }}</label>
-        <input type="text" class="form-control" id="surname" name="surname" required>
+        <input type="text" class="form-control" id="surname" name="surname"
+               value="{{ user.surname or '' }}" required>
       </div>
       <div class="col-md-6">
         <label for="surname_en" class="form-label">{{ _('Surname (en)') }}</label>
-        <input type="text" class="form-control" id="surname_en" name="surname_en" required>
+        <input type="text" class="form-control" id="surname_en" name="surname_en"
+               value="{{ user.surname_en or '' }}" required>
       </div>
     </div>
 
     <div class="row g-3 mt-3">
       <div class="col-md-6">
         <label for="name" class="form-label">{{ _('Name') }}</label>
-        <input type="text" class="form-control" id="name" name="name" required>
+        <input type="text" class="form-control" id="name" name="name"
+               value="{{ user.name or '' }}" required>
       </div>
       <div class="col-md-6">
         <label for="name_en" class="form-label">{{ _('Name (en)') }}</label>
-        <input type="text" class="form-control" id="name_en" name="name_en" required>
+        <input type="text" class="form-control" id="name_en" name="name_en"
+               value="{{ user.name_en or '' }}" required>
       </div>
     </div>
 
     <div class="mb-3 mt-3">
       <label for="patronymic" class="form-label">{{ _('Patronymic') }}</label>
-      <input type="text" class="form-control" id="patronymic" name="patronymic">
+      <input type="text" class="form-control" id="patronymic" name="patronymic"
+             value="{{ user.patronymic or '' }}">
     </div>
 
     <div class="row g-3">
       <div class="col-md-6">
         <label for="orcid" class="form-label">{{ _('ORCID') }}</label>
-        <input type="text" class="form-control" id="orcid" name="orcid">
+        <input type="text" class="form-control" id="orcid" name="orcid"
+               value="{{ user.orcid or '' }}">
       </div>
       <div class="col-md-6">
         <label for="internet_profile" class="form-label">{{ _('Internet profile (URL)') }}</label>
-        <input type="text" class="form-control" id="internet_profile" name="internet_profile">
+        <input type="text" class="form-control" id="internet_profile" name="internet_profile"
+               value="{{ user.internet_profile or '' }}">
       </div>
     </div>
 
     <div class="row g-3 mt-3">
       <div class="col-md-6">
         <label for="degrees" class="form-label">{{ _('Degrees held') }}</label>
-        <input type="text" class="form-control" id="degrees" name="degrees">
+        <input type="text" class="form-control" id="degrees" name="degrees"
+               value="{{ user.degrees or '' }}">
       </div>
       <div class="col-md-6">
         <label for="degrees_en" class="form-label">{{ _('Degrees held (en)') }}</label>
-        <input type="text" class="form-control" id="degrees_en" name="degrees_en">
+        <input type="text" class="form-control" id="degrees_en" name="degrees_en"
+               value="{{ user.degrees_en or '' }}">
       </div>
     </div>
 
     <div class="row g-3 mt-3">
       <div class="col-md-6">
         <label for="occupation" class="form-label">{{ _('Occupation') }}</label>
-        <input type="text" class="form-control" id="occupation" name="occupation">
+        <input type="text" class="form-control" id="occupation" name="occupation"
+               value="{{ user.occupation or '' }}">
       </div>
       <div class="col-md-6">
         <label for="occupation_en" class="form-label">{{ _('Occupation (en)') }}</label>
-        <input type="text" class="form-control" id="occupation_en" name="occupation_en">
+        <input type="text" class="form-control" id="occupation_en" name="occupation_en"
+               value="{{ user.occupation_en or '' }}">
       </div>
     </div>
 
     <div class="row g-3 mt-3">
       <div class="col-md-6">
         <label for="position" class="form-label">{{ _('Position, department, place of work') }}</label>
-        <input type="text" class="form-control" id="position" name="position">
+        <input type="text" class="form-control" id="position" name="position"
+               value="{{ user.position or '' }}">
       </div>
       <div class="col-md-6">
         <label for="position_en" class="form-label">{{ _('Position, department, place of work (en)') }}</label>
-        <input type="text" class="form-control" id="position_en" name="position_en">
+        <input type="text" class="form-control" id="position_en" name="position_en"
+               value="{{ user.position_en or '' }}">
       </div>
     </div>
 
     <div class="row g-3 mt-3">
       <div class="col-md-6">
         <label for="interests" class="form-label">{{ _('Professional interests') }}</label>
-        <input type="text" class="form-control" id="interests" name="interests">
+        <input type="text" class="form-control" id="interests" name="interests"
+               value="{{ user.interests or '' }}">
       </div>
       <div class="col-md-6">
         <label for="interests_en" class="form-label">{{ _('Professional interests (en)') }}</label>
-        <input type="text" class="form-control" id="interests_en" name="interests_en">
+        <input type="text" class="form-control" id="interests_en" name="interests_en"
+               value="{{ user.interests_en or '' }}">
       </div>
     </div>
 
     <div class="row g-3 mt-3">
       <div class="col-md-6">
         <label for="city" class="form-label">{{ _('City') }}</label>
-        <input type="text" class="form-control" id="city" name="city">
+        <input type="text" class="form-control" id="city" name="city"
+               value="{{ user.city or '' }}">
       </div>
       <div class="col-md-6">
         <label for="city_en" class="form-label">{{ _('City (en)') }}</label>
-        <input type="text" class="form-control" id="city_en" name="city_en">
+        <input type="text" class="form-control" id="city_en" name="city_en"
+               value="{{ user.city_en or '' }}">
       </div>
     </div>
 
     <div class="row g-3 mt-3">
       <div class="col-md-6">
         <label for="address" class="form-label">{{ _('Address') }}</label>
-        <input type="text" class="form-control" id="address" name="address">
+        <input type="text" class="form-control" id="address" name="address"
+               value="{{ user.address or '' }}">
       </div>
       <div class="col-md-6">
         <label for="address_en" class="form-label">{{ _('Address (en)') }}</label>
-        <input type="text" class="form-control" id="address_en" name="address_en">
+        <input type="text" class="form-control" id="address_en" name="address_en"
+               value="{{ user.address_en or '' }}">
       </div>
     </div>
 
     <div class="row g-3 mt-3">
       <div class="col-md-6">
         <label for="country" class="form-label">{{ _('Country') }}</label>
-        <input type="text" class="form-control" id="country" name="country">
+        <input type="text" class="form-control" id="country" name="country"
+               value="{{ user.country or '' }}">
       </div>
       <div class="col-md-6">
         <label for="state" class="form-label">{{ _('State/Province') }}</label>
-        <input type="text" class="form-control" id="state" name="state">
+        <input type="text" class="form-control" id="state" name="state"
+               value="{{ user.state or '' }}">
       </div>
     </div>
 
