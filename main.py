@@ -11,6 +11,7 @@ from flask import session
 from werkzeug.security import check_password_hash
 from functools import wraps
 from datetime import datetime, timezone, timedelta
+import subprocess
 
 app = Flask(__name__)
 
@@ -355,6 +356,27 @@ def new_issue():
         return redirect("/admin/issues")
 
     return render_template("admin/new_issue.html")
+
+
+@app.route("/admin/issues/update", methods=["POST"])
+@admin_required
+def update_issues():
+    try:
+        result = subprocess.run(
+            ["python", "-m", "tools.archive_scraper"],
+            capture_output=True,
+            text=True
+        )
+
+        if result.returncode != 0:
+            flash(f"Scraper failed: {result.stderr}", "danger")
+        else:
+            flash("Issues updated successfully!", "success")
+
+    except Exception as e:
+        flash(f"Error while updating issues: {str(e)}", "danger")
+
+    return redirect(url_for("admin_issues"))
 
 
 if __name__ == '__main__':
