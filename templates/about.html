@@ -2,42 +2,86 @@
 {% block title %}{{ _('About – Quaternary Journal') }}{% endblock %}
 {% block content %}
     <div class="bg-white p-5 rounded shadow-sm mb-5">
-        <h2>{{ _('About the Journal') }}</h2>
-        <p>{{ _(
-            'Bulletin of the Commission for Study of the Quaternary (BCSQ) '
-            '(Rus. Бюллетень Комиссии по изучению четвертичного периода (БКИЧП), '
-            'Fr. Bulletin de la Commission pour l\'Etude du Quaternaire) – is an '
-            'annual scientific publication (serial title), publishing papers, '
-            'reviews, conference materials and a chronicle about the Quaternary '
-            'geological period (the Quaternary System). The Bulletin covers '
-            'fundamental, global and regional problems of the Quaternary Science. '
-            'Papers related to all aspects of quaternary geology, stratigraphy, '
-            'geotectonic, sedimentology, paleontology, paleogeography, '
-            'geomorphology, permafrost study, paleo soil study, archeology, etс. '
-            'The Bulletin is fully open access with double-blind peer-reviewed '
-            'publications.<br><br>'
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <h2>{{ _('About the Journal') }}</h2>
+                <p>{{ _(
+                    'Bulletin of the Commission for Study of the Quaternary (BCSQ) '
+                    '(Rus. Бюллетень Комиссии по изучению четвертичного периода (БКИЧП), '
+                    'Fr. Bulletin de la Commission pour l\'Etude du Quaternaire) – is an '
+                    'annual scientific publication (serial title), publishing papers, '
+                    'reviews, conference materials and a chronicle about the Quaternary '
+                    'geological period (the Quaternary System). The Bulletin covers '
+                    'fundamental, global and regional problems of the Quaternary Science. '
+                    'Papers related to all aspects of quaternary geology, stratigraphy, '
+                    'geotectonic, sedimentology, paleontology, paleogeography, '
+                    'geomorphology, permafrost study, paleo soil study, archeology, etс. '
+                    'The Bulletin is fully open access with double-blind peer-reviewed '
+                    'publications.<br><br>'
 
-            'The Bulletin founded by the Commission for the Study of the Quaternary '
-            'of the Academy of Sciences of the USSR (1929) as a professional '
-            'academic publication. It is the longest-running journal related to the '
-            'Quaternary research. There were 1/3 releases of the Bulletin published '
-            'almost annually, 75 issues, available in the online archive. The '
-            'founders of the bulletin are the Commission for the Study of the '
-            'Quaternary Period of the Russian Academy of Sciences (RAS) and the '
-            'Geological Institute RAS. The Bulletin is included to the Russian '
-            'Science Citation Index (Elibrary) and is in a process of registration '
-            'to the international bibliographic database (Scopus). Printed by the '
-            'GEOS Publishing House, print ISSN 0366-0907, and library heading: The '
-            'Quaternary System.<br><br>'
+                    'The Bulletin founded by the Commission for the Study of the Quaternary '
+                    'of the Academy of Sciences of the USSR (1929) as a professional '
+                    'academic publication. It is the longest-running journal related to the '
+                    'Quaternary research. There were 1/3 releases of the Bulletin published '
+                    'almost annually, 75 issues, available in the online archive. The '
+                    'founders of the bulletin are the Commission for the Study of the '
+                    'Quaternary Period of the Russian Academy of Sciences (RAS) and the '
+                    'Geological Institute RAS. The Bulletin is included to the Russian '
+                    'Science Citation Index (Elibrary) and is in a process of registration '
+                    'to the international bibliographic database (Scopus). Printed by the '
+                    'GEOS Publishing House, print ISSN 0366-0907, and library heading: The '
+                    'Quaternary System.<br><br>'
 
-            'The editorial office is located in the Geological Institute RAS, the '
-            'Bulletin website with information in Russian and English. The '
-            'editorial board includes leading scientists; the chief editor is the '
-            'chairman of the Commission for the Study of the Quaternary period Dr. '
-            'Yu.A. Lavrushin. Since 2018, papers published with English summary, '
-            'keywords and bibliography, some articles published in English with an '
-            'expanded Russian summary.'
-        ) }}</p>
+                    'The editorial office is located in the Geological Institute RAS, the '
+                    'Bulletin website with information in Russian and English. The '
+                    'editorial board includes leading scientists; the chief editor is the '
+                    'chairman of the Commission for the Study of the Quaternary period Dr. '
+                    'Yu.A. Lavrushin. Since 2018, papers published with English summary, '
+                    'keywords and bibliography, some articles published in English with an '
+                    'expanded Russian summary.'
+                ) }}</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <img src="/static/img/Bull-CQ.jpg" alt="about_img_1"
+                     class="img-fluid rounded shadow-sm mb-1"
+                     style="max-width: 400px;">
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white p-5 rounded shadow-sm mb-5">
+        <div class="row align-items-center">
+            <div class="col-md-7">
+                <h2>{{ _('The Quaternary Period') }}</h2>
+                <p>{{ _(
+                    'The Quaternary period, or Anthropogene (Quaternary system; '
+                    'Anthropogenic period; Quaternary) is a geological period '
+                    '(geological system), the modern stage of the Earth\'s history, '
+                    'the third (current) period of the Cenozoic era. It began 2.58 '
+                    'million years ago and continues to this day.'
+                ) }}</p>
+                <p>{{ _(
+                    'This is the shortest geological period, but it was in the '
+                    'Quaternary that most modern landforms were formed in their '
+                    'modern form and many significant events in the history of the '
+                    'Earth (from the point of view of man) occurred, the most '
+                    'important of which are the glaciation periods and the emergence '
+                    'of man. In such a short time interval, radiocarbon analysis '
+                    'and other methods based on the decay of short-lived isotopes '
+                    'are used primarily to determine age. The specificity of the '
+                    'Quaternary period compared to other geological periods created '
+                    'a special branch of geology – Quaternary.'
+                ) }}</p>
+            </div>
+            <div class="col-md-5 text-center">
+                <img src="/static/img/about_1.png" alt="about_img_1"
+                     class="img-fluid rounded shadow-sm mb-1"
+                     style="max-width: 200px;">
+                <!-- <img src="/static/img/about_2.png" alt="about_img_2"
+                     class="img-fluid rounded shadow-sm"
+                     style="max-width: 240px;"> -->
+            </div>
+        </div>
     </div>
 
     <div class="bg-white p-5 rounded shadow-sm">
