@@ -11,11 +11,17 @@
   </div>
 </div>
 
-<ul class="list-group">
+<div class="mb-3">
+  <input type="text" id="issueSearch" class="form-control" placeholder="Search issues...">
+</div>
+
+<ul class="list-group" id="issuesList">
   {% for issue in issues %}
     <a href="/admin/issues/{{ issue.id }}" class="list-group-item list-group-item-action border-secondary">
       Issue #{{ issue.id }} — {{ issue.title or "Untitled" }} ({{ issue.year }})
     </a>
   {% endfor %}
 </ul>
+
+<script src="/static/admin_panel.js"></script>
 {% endblock %}

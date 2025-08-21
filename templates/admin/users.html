@@ -7,7 +7,6 @@
     <h4 class="card-title mb-4">Users</h4>
 
     <form method="get" class="row g-2 align-items-center mb-4">
-      <!-- Search input -->
       <div class="col-md-4">
         <div class="input-group">
           <input type="text" name="q" value="{{ q }}" class="form-control" placeholder="Search by name, surname, or email">
@@ -17,7 +16,6 @@
         </div>
       </div>
 
-      <!-- Filter admin -->
       <div class="col-md-3">
         <select name="filter_admin" class="form-select">
           <option value="">All Users</option>
@@ -26,7 +24,6 @@
         </select>
       </div>
 
-      <!-- Sort by -->
       <div class="col-md-3">
         <select name="sort" class="form-select">
           <option value="newest" {% if sort == 'newest' %}selected{% endif %}>Newest First</option>
@@ -34,7 +31,6 @@
         </select>
       </div>
 
-      <!-- Submit -->
       <div class="col-md-2">
         <button type="submit" class="btn btn-primary w-100">Apply</button>
       </div>
