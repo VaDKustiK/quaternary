@@ -207,6 +207,10 @@ def contact():
 def submit():
     return render_template("submit.html")
 
+@app.route("/editorial")
+def editorial():
+    return render_template("editorial_board.html")
+
 
 # Admin panel
 @app.route("/admin")

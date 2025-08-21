@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block title %}{{ _('Home – Quaternary Journal') }}{% endblock %}
+{% block title %}{{ _('Home') }}{% endblock %}
 {% block content %}
 <div class="bg-white p-5 rounded shadow-sm text-center mb-5">
     <h1 class="display-4">{{ _('Бюллетень Комиссии по изучению четвертичного периода') }}</h1>
@@ -20,10 +20,14 @@
         <div class="card-body">
           <h2 class="card-title">{{ _('About the Journal') }}</h2>
           <p class="card-text">
-            {{ _('The "Бюллетень Комиссии по изучению четвертичного периода" publishes peer-reviewed research on Pleistocene and Holocene studies.') }}
-          </p>
-          <p class="card-text">
-            {{ _('Established by the Commission of the Russian Academy of Sciences, the journal advances Quaternary research in Russia and beyond.') }}
+            {{ _('Bulletin of the Commission for Study of the Quaternary (BCSQ) '
+                  '(Rus. Бюллетень Комиссии по изучению четвертичного периода (БКИЧП), '
+                  'Fr. Bulletin de la Commission pour l\'Etude du Quaternaire) – is an annual scientific publication (serial title), '
+                  'publishing papers, reviews, conference materials and a chronicle about the Quaternary geological period '
+                  '(the Quaternary System). The Bulletin covers fundamental, global and regional problems of the Quaternary Science. '
+                  'Papers related to all aspects of quaternary geology, stratigraphy, geotectonic, sedimentology, paleontology, '
+                  'paleogeography, geomorphology, permafrost study, paleo soil study, archeology, etс. '
+                  'The Bulletin is fully open access with double-blind peer-reviewed publications.') }}
           </p>
         </div>
       </div>
