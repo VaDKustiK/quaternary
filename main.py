@@ -195,6 +195,13 @@ def issue_detail(issue_id):
     return render_template('issue_detail.html', issue=issue)
 
 
+# Footer
+@app.route("/contact")
+def contact():
+    email = "example@example.com"
+    return render_template("contact.html", email=email)
+
+
 # Sidebar (index page)
 @app.route("/submit")
 def submit():
