@@ -203,13 +203,24 @@ def contact():
 
 
 # Sidebar (index page)
-@app.route("/submit")
-def submit():
-    return render_template("submit.html")
-
 @app.route("/editorial")
 def editorial():
     return render_template("editorial_board.html")
+
+
+@app.route("/terms")
+def terms():
+    return render_template("terms.html")
+
+
+@app.route("/ethics")
+def ethics():
+    return render_template("ethics.html")
+
+
+@app.route("/submit")
+def submit():
+    return render_template("submit.html")
 
 
 # Admin panel
