@@ -6,6 +6,7 @@ from tools.models.init_db import engine, SessionLocal, init_db
 from tools.models.issue import Issue
 from werkzeug.security import generate_password_hash
 from tools.models.user import User
+from tools.models.author import Author
 from dotenv import load_dotenv
 from flask import session
 from werkzeug.security import check_password_hash
@@ -218,6 +219,13 @@ def ethics():
     return render_template("ethics.html")
 
 
+@app.route("/authors")
+def authors():
+    db = SessionLocal()
+    authors = db.query(Author).order_by(Author.name.asc()).all()
+    return render_template("authors.html", authors=authors)
+
+
 @app.route("/submit")
 def submit():
     return render_template("submit.html")
@@ -399,6 +407,33 @@ def update_issues():
         flash(f"Error while updating issues: {str(e)}", "danger")
 
     return redirect(url_for("admin_issues"))
+
+
+@app.route("/admin/authors")
+@admin_required
+def admin_authors():
+    db = SessionLocal()
+    authors = db.query(Author).order_by(Author.name.asc()).all()
+    return render_template("admin/authors.html", authors=authors)
+
+
+@app.route("/admin/authors/update", methods=["POST"])
+@admin_required
+def update_authors():
+    try:
+        result = subprocess.run(
+            ["python", "-m", "tools.authors_scraper"],
+            capture_output=True,
+            text=True
+        )
+        if result.returncode != 0:
+            flash(f"Author scraper failed: {result.stderr}", "danger")
+        else:
+            flash("Authors updated successfully!", "success")
+    except Exception as e:
+        flash(f"Error while updating authors: {str(e)}", "danger")
+
+    return redirect(url_for("admin_authors"))
 
 
 if __name__ == '__main__':
