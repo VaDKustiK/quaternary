@@ -230,6 +230,10 @@ def authors():
 def submit():
     return render_template("submit.html")
 
+@app.route("/license")
+def license_page():
+    return render_template("license.html")
+
 
 # Admin panel
 @app.route("/admin")

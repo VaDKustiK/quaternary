@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}{{ _('License Agreement') }}{% endblock %}
+{% block content %}
+<div class="container mt-5">
+  <h2>{{ _('License Agreement') }}</h2>
+  <p><strong>{{ _('Journal Registered:') }}</strong> ___</p>
+
+  <p>{{ _('Materials of the journal are available under the license:') }}</p>
+  
+  <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">
+    <img src="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png" alt="{{ _('CC BY-NC-ND 4.0') }}">
+  </a>
+
+  <p>
+    {{ _('Access under') }}
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">
+      {{ _('Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License') }}.
+    </a>
+  </p>
+</div>
+{% endblock %}
