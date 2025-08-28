@@ -199,7 +199,7 @@ def issue_detail(issue_id):
 # Footer
 @app.route("/contact")
 def contact():
-    email = "example@example.com"
+    email = "quaternary@ginras.ru"
     return render_template("contact.html", email=email)
 
 
