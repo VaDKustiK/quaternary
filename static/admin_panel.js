@@ -16,3 +16,10 @@ document.getElementById("issueSearch").addEventListener("keyup", function() {
     item.style.display = text.includes(filter) ? "" : "none";
   });
 });
+
+document.getElementById("authorSearch").addEventListener("input", function () {
+  const query = this.value.toLowerCase();
+  document.querySelectorAll("#authorsList li").forEach(li => {
+    li.style.display = li.textContent.toLowerCase().includes(query) ? "" : "none";
+  });
+});

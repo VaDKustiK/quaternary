@@ -14,32 +14,16 @@
   <input type="text" id="authorSearch" class="form-control" placeholder="Search authors...">
 </div>
 
-<div class="accordion" id="authorsAccordion">
+<ul class="list-group" id="authorsList">
   {% for author in authors %}
-    <div class="accordion-item border-secondary">
-      <h2 class="accordion-header" id="heading{{ author.id }}">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ author.id }}" aria-expanded="false" aria-controls="collapse{{ author.id }}">
-          {{ author.name }}
-        </button>
-      </h2>
-      <div id="collapse{{ author.id }}" class="accordion-collapse collapse" aria-labelledby="heading{{ author.id }}" data-bs-parent="#authorsAccordion">
-        <div class="accordion-body">
-          {% if author.articles %}
-            <ul class="list-group">
-              {% for article in author.articles %}
-                <li class="list-group-item border-secondary">
-                  {{ article.title }}
-                </li>
-              {% endfor %}
-            </ul>
-          {% else %}
-            <p class="text-muted">No articles found</p>
-          {% endif %}
-        </div>
-      </div>
-    </div>
+    <li class="list-group-item list-group-item-action border-secondary">
+      {{ author.name }}
+      {% if author.affiliation %}
+        <span class="text-muted"> — {{ author.affiliation }}</span>
+      {% endif %}
+    </li>
   {% endfor %}
-</div>
+</ul>
 
 <script src="/static/admin_panel.js"></script>
 {% endblock %}
