@@ -36,10 +36,10 @@
         <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button" data-bs-toggle="dropdown">
           {{ get_locale().upper() }}
         </a>
-        <ul class="dropdown-menu dropdown-menu-end">
-          <li><a class="dropdown-item" href="?lang=ru">RU</a></li>
-          <li><a class="dropdown-item" href="?lang=en">EN</a></li>
-        </ul>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="{{ url_for('set_language', lang='ru') }}">RU</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('set_language', lang='en') }}">EN</a></li>
+          </ul>
       </div>
 
       <!-- Auth -->

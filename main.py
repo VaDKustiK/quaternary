@@ -26,9 +26,14 @@ app.config['BABEL_SUPPORTED_LOCALES'] = ['en', 'ru']
 babel = Babel()
 
 def get_locale():
-    lang = request.args.get('lang')
+    if "lang" in session:
+        return session["lang"]
+
+    lang = request.args.get("lang")
     if lang in app.config['BABEL_SUPPORTED_LOCALES']:
+        session["lang"] = lang
         return lang
+    
     return request.accept_languages.best_match(app.config['BABEL_SUPPORTED_LOCALES'])
 
 
@@ -37,6 +42,13 @@ babel.init_app(app, locale_selector=get_locale)
 @app.context_processor
 def inject_locale():
     return {'get_locale': get_locale}
+
+
+@app.route("/set_language/<lang>")
+def set_language(lang):
+    if lang in app.config['BABEL_SUPPORTED_LOCALES']:
+        session["lang"] = lang
+    return redirect(request.referrer or url_for("index"))
 
 
 init_db()  # creating tables once before running the app
