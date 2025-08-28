@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-07-03 14:08+0300\n"
-"PO-Revision-Date: 2025-07-03 14:08+0300\n"
+"POT-Creation-Date: 2025-08-28 18:11+0300\n"
+"PO-Revision-Date: 2025-08-28 18:11+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ru\n"
 "Language-Team: ru <LL@li.org>\n"
@@ -19,111 +19,557 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: templates/index.html:2
-msgid "Home – Quaternary Journal"
-msgstr ""
+#: templates/about.html:2 templates/base.html:26
+msgid "About"
+msgstr "О журнале"
 
-#: templates/index.html:6
-msgid "Бюллетень Комиссии по изучению четвертичного периода"
-msgstr ""
-
-#: templates/index.html:7
-msgid "Journal of the Quaternary Period Commission"
-msgstr "Журнал Комиссии по Четвертичному Периоду"
-
-#: templates/index.html:9
-msgid "View Latest Issue"
-msgstr "Посмотреть последний выпуск"
-
-#: templates/index.html:18
+#: templates/about.html:7 templates/index.html:21
 msgid "About the Journal"
 msgstr "О журнале"
 
-#: templates/index.html:20
+#: templates/about.html:8
 msgid ""
-"The \"Бюллетень Комиссии по изучению четвертичного периода\" publishes "
-"peer-reviewed research on Pleistocene and Holocene studies."
+"Bulletin of the Commission for Study of the Quaternary (BCSQ) (Rus. "
+"Бюллетень Комиссии по изучению четвертичного периода (БКИЧП), Fr. "
+"Bulletin de la Commission pour l'Etude du Quaternaire) – is an annual "
+"scientific publication (serial title), publishing papers, reviews, "
+"conference materials and a chronicle about the Quaternary geological "
+"period (the Quaternary System). The Bulletin covers fundamental, global "
+"and regional problems of the Quaternary Science. Papers related to all "
+"aspects of quaternary geology, stratigraphy, geotectonic, sedimentology, "
+"paleontology, paleogeography, geomorphology, permafrost study, paleo soil"
+" study, archeology, etс. The Bulletin is fully open access with double-"
+"blind peer-reviewed publications.<br><br>The Bulletin founded by the "
+"Commission for the Study of the Quaternary of the Academy of Sciences of "
+"the USSR (1929) as a professional academic publication. It is the "
+"longest-running journal related to the Quaternary research. There were "
+"1/3 releases of the Bulletin published almost annually, 75 issues, "
+"available in the online archive. The founders of the bulletin are the "
+"Commission for the Study of the Quaternary Period of the Russian Academy "
+"of Sciences (RAS) and the Geological Institute RAS. The Bulletin is "
+"included to the Russian Science Citation Index (Elibrary) and is in a "
+"process of registration to the international bibliographic database "
+"(Scopus). Printed by the GEOS Publishing House, print ISSN 0366-0907, and"
+" library heading: The Quaternary System.<br><br>The editorial office is "
+"located in the Geological Institute RAS, the Bulletin website with "
+"information in Russian and English. The editorial board includes leading "
+"scientists; the chief editor is the chairman of the Commission for the "
+"Study of the Quaternary period Dr. Yu.A. Lavrushin. Since 2018, papers "
+"published with English summary, keywords and bibliography, some articles "
+"published in English with an expanded Russian summary."
+msgstr ""
+"Бюллетень Комиссии по изучению четвертичного периода (БКИЧП) — ежегодное научное издание, публикующее статьи, обзоры, материалы конференций и хронику, посвящённые четвертичному геологическому периоду (Четвертичная система). Бюллетень охватывает фундаментальные, глобальные и региональные проблемы четвертичной науки. Публикуются работы по всем аспектам четвертичной геологии, стратиграфии, геотектонике, седиментологии, палеонтологии, палеогеографии, геоморфологии, мерзлотоведению, изучению древних почв, археологии и др. Бюллетень полностью открыт для доступа, публикации проходят двойное слепое рецензирование.<br><br>Бюллетень основан Комиссией по изучению четвертичного периода Академии наук СССР (1929) как профессиональное академическое издание. Это самый продолжительный журнал, связанный с исследованиями четвертичного периода. Было опубликовано 75 выпусков, доступных в онлайн-архиве. Основатели — Комиссия по изучению четвертичного периода РАН и Геологический институт РАН. Бюллетень включён в Российский индекс научного цитирования (Elibrary) и находится в процессе регистрации в международной библиографической базе данных (Scopus). Печатается издательством «ГЕОС», печатный ISSN 0366-0907, рубрика: Четвертичная система.<br><br>Редакция находится в Геологическом институте РАН, сайт бюллетеня содержит информацию на русском и английском языках. В редакционный совет входят ведущие учёные; главный редактор — председатель Комиссии по изучению четвертичного периода д-р Ю.А. Лаврушин. С 2018 года статьи публикуются с английским резюме, ключевыми словами и библиографией, некоторые статьи публикуются на английском языке с расширенным русским резюме."
+
+#: templates/about.html:55
+msgid "The Quaternary Period"
+msgstr "Четвертичный период"
+
+#: templates/about.html:56
+msgid ""
+"The Quaternary period, or Anthropogene (Quaternary system; Anthropogenic "
+"period; Quaternary) is a geological period (geological system), the "
+"modern stage of the Earth's history, the third (current) period of the "
+"Cenozoic era. It began 2.58 million years ago and continues to this day."
+msgstr ""
+"Четвертичный период, или антропоген (четвертичная система; антропогенный период; четвертичный), — геологический период (геологическая система), современный этап истории Земли, третий (нынешний) период кайнозойской эры. Начался 2,58 миллиона лет назад и продолжается по настоящее время."
+
+#: templates/about.html:63
+msgid ""
+"This is the shortest geological period, but it was in the Quaternary that"
+" most modern landforms were formed in their modern form and many "
+"significant events in the history of the Earth (from the point of view of"
+" man) occurred, the most important of which are the glaciation periods "
+"and the emergence of man. In such a short time interval, radiocarbon "
+"analysis and other methods based on the decay of short-lived isotopes are"
+" used primarily to determine age. The specificity of the Quaternary "
+"period compared to other geological periods created a special branch of "
+"geology – Quaternary."
+msgstr ""
+"Это самый короткий геологический период, но именно в четвертичном периоде сформировались современные формы рельефа и произошли многие значимые события в истории Земли (с точки зрения человека), важнейшие из которых — периоды оледенения и появление человека. В столь коротком временном интервале для определения возраста преимущественно используются радиоуглеродный анализ и другие методы, основанные на распаде короткоживущих изотопов. Специфика четвертичного периода по сравнению с другими геологическими периодами привела к возникновению особой отрасли геологии — четвертичной науки."
+
+#: templates/about.html:88
+msgid "Main editors"
+msgstr "Главные редакторы"
+
+#: templates/about.html:90
+msgid ""
+"Дегтярёв Кирилл Евгеньевич — главный редактор, председатель Комиссии по "
+"изучению четвертичного периода"
 msgstr ""
 
-#: templates/index.html:23
-msgid ""
-"Established by the Commission of the Russian Academy of Sciences, the "
-"journal advances Quaternary research in Russia and beyond."
+#: templates/about.html:91
+msgid "Тесаков Алексей Сергеевич — заместитель главного редатора"
 msgstr ""
 
-#: templates/index.html:31 templates/index.html:46
-msgid "Submit"
-msgstr "Заявка на публикацию"
+#: templates/about.html:92
+msgid "Фролов Павел Дмитриевич — учёный секретарь"
+msgstr ""
 
-#: templates/index.html:32 templates/index.html:50
-msgid "How to Submit"
-msgstr "Правила подачи рукописи"
+#: templates/about.html:93
+msgid "Лаврушин Юрий Александрович — ГИН РАН"
+msgstr ""
 
-#: templates/index.html:33 templates/index.html:54
-msgid "Rules"
-msgstr "Правила"
+#: templates/about.html:94
+msgid "Панин Андрей Валерьевич — ИГ РАН"
+msgstr ""
 
-#: templates/index.html:34 templates/index.html:58
-msgid "Terms of Use"
-msgstr "Правила пользования сайтом"
+#: templates/about.html:95
+msgid "Застрожнов Андрей Станиславович — Институт Карпинского"
+msgstr ""
 
-#: templates/index.html:35 templates/index.html:62
-msgid "Ethics"
-msgstr "Этика научных публикаций"
+#: templates/about.html:96
+msgid "Зыкин, Владимир Сергеевич — НГУ"
+msgstr ""
 
-#: templates/index.html:36 templates/index.html:66
-msgid "Review Rules"
-msgstr "Правила просмотра"
+#: templates/about.html:97
+msgid "Draženko Nenadić — Белградский университет"
+msgstr ""
 
-#: templates/index.html:37 templates/index.html:70 templates/index.html:71
-msgid "Editorial Board"
-msgstr "Редакционная коллегия"
+#: templates/about.html:98
+msgid "Thijs van Kolfschoten — Лейденский университет"
+msgstr ""
 
-#: templates/index.html:38 templates/index.html:74
+#: templates/archive.html:2
+msgid "Archive"
+msgstr "Архив"
+
+#: templates/archive.html:5 templates/base.html:27
+msgid "Archive"
+msgstr "Архив"
+
+#: templates/authors.html:2 templates/authors.html:6 templates/index.html:41
 msgid "Authors"
 msgstr "Авторы"
 
-#: templates/index.html:39 templates/index.html:78
+#: templates/base.html:17
+msgid "BCSQ"
+msgstr "БКИЧП"
+
+#: templates/base.html:28 templates/editorial_board.html:2
+#: templates/index.html:40
+msgid "Editorial Board"
+msgstr "Редакционная коллегия"
+
+#: templates/base.html:48 templates/base.html:72 templates/profile.html:2
+msgid "Profile"
+msgstr "Профиль"
+
+#: templates/base.html:50 templates/base.html:91
+msgid "Login"
+msgstr "Войти"
+
+#: templates/base.html:62
+msgid "Account"
+msgstr "Аккаунт"
+
+#: templates/base.html:64
+msgid "Sign in"
+msgstr "Войти"
+
+#: templates/base.html:73
+msgid "My Publications"
+msgstr "Мои публикации"
+
+#: templates/base.html:76
+msgid "Admin Panel"
+msgstr "Панель администратора"
+
+#: templates/base.html:79
+msgid "Log out"
+msgstr "Выйти"
+
+#: templates/admin/edit_user.html:35 templates/base.html:84
+#: templates/profile.html:12 templates/register.html:22
+msgid "Email"
+msgstr "Электронная почта"
+
+#: templates/base.html:88 templates/register.html:28
+msgid "Password"
+msgstr "Пароль"
+
+#: templates/base.html:93
+msgid "Forgot your password?"
+msgstr "Забыли пароль?"
+
+#: templates/base.html:94 templates/register.html:2 templates/register.html:8
+#: templates/register.html:51
+msgid "Register"
+msgstr "Регистрация"
+
+#: templates/base.html:124 templates/index.html:5
+msgid "Bulletin of the Commission for Study of the Quaternary"
+msgstr "Бюллетень Комиссии по изучению четвертичного периода"
+
+#: templates/base.html:127 templates/contact.html:2 templates/contact.html:5
+msgid "Contact Us"
+msgstr "Связаться с нами"
+
+#: templates/base.html:130
+msgid "Geological Institute"
+msgstr "Геологический институт"
+
+#: templates/base.html:133
+msgid "Russian Academy of Sciences"
+msgstr "Российская Академия Наук"
+
+#: templates/contact.html:7
+msgid "If you want to contact us, please send an email to"
+msgstr "Если вы хотите связаться с нами, пожалуйста, отправьте письмо на"
+
+#: templates/contact.html:11
+msgid "Send Email"
+msgstr "Отправить письмо"
+
+#: templates/ethics.html:2 templates/index.html:43
+msgid "Ethics"
+msgstr "Этика"
+
+#: templates/index.html:2
+msgid "Home"
+msgstr "Главная"
+
+#: templates/index.html:6
+msgid "RAS Geological Institute (GIN RAS)"
+msgstr "Геологический институт РАН (ГИН РАН)"
+
+#: templates/index.html:9
+msgid "View Latest Issue"
+msgstr "Смотреть последнее издание"
+
+#: templates/index.html:11
+msgid "No issues available yet."
+msgstr "Издания пока недоступны."
+
+#: templates/index.html:23
+msgid ""
+"Bulletin of the Commission for Study of the Quaternary (BCSQ) (Rus. "
+"Бюллетень Комиссии по изучению четвертичного периода (БКИЧП), Fr. "
+"Bulletin de la Commission pour l'Etude du Quaternaire) – is an annual "
+"scientific publication (serial title), publishing papers, reviews, "
+"conference materials and a chronicle about the Quaternary geological "
+"period (the Quaternary System). The Bulletin covers fundamental, global "
+"and regional problems of the Quaternary Science. Papers related to all "
+"aspects of quaternary geology, stratigraphy, geotectonic, sedimentology, "
+"paleontology, paleogeography, geomorphology, permafrost study, paleo soil"
+" study, archeology, etс. The Bulletin is fully open access with double-"
+"blind peer-reviewed publications."
+msgstr ""
+"Бюллетень Комиссии по изучению четвертичного периода (БКИЧП) — ежегодное научное издание, публикующее статьи, обзоры, материалы конференций и хронику, посвящённые четвертичному геологическому периоду (Четвертичная система). Бюллетень охватывает фундаментальные, глобальные и региональные проблемы четвертичной науки. Публикуются работы по всем аспектам четвертичной геологии, стратиграфии, геотектонике, седиментологии, палеонтологии, палеогеографии, геоморфологии, мерзлотоведению, изучению древних почв, археологии и др. Бюллетень полностью открыт для доступа, публикации проходят двойное слепое рецензирование."
+
+#: templates/index.html:39
+msgid "Аrchive"
+msgstr "Архив"
+
+#: templates/index.html:42 templates/terms.html:2 templates/terms.html:6
+msgid "Terms of Use"
+msgstr "Правила"
+
+#: templates/index.html:44
+msgid "Review Rules"
+msgstr "Рецензирование"
+
+#: templates/index.html:45
+msgid "Submit"
+msgstr "Подать статью"
+
+#: templates/index.html:46
+msgid "Contacts"
+msgstr "Контакты"
+
+#: templates/index.html:47 templates/license.html:2 templates/license.html:5
 msgid "License Agreement"
-msgstr "Лицензионное соглашение"
+msgstr "Регистрации"
 
-#: templates/index.html:47
-msgid "Instructions on how to submit your manuscript will be added here."
-msgstr "Инструкции о том, как подать рукопись, будут добавлены здесь."
+#: templates/index.html:60
+msgid "About Commission"
+msgstr "О комиссии"
 
-#: templates/index.html:51
-msgid "Details for authors about the submission process."
-msgstr "Подробная информация для авторов о процессе подачи заявок."
+#: templates/index.html:62
+msgid ""
+"The Commission for the Study of the Quaternary Period of the Russian "
+"Academy of Sciences organizes the coordination of research and production"
+" work carried out by organizations associated with the study of the "
+"Quaternary geological period. This is done by convening conferences, "
+"meetings, etc., as well as publishing the latest materials in the "
+"Commission's publications. In addition, direct contacts and consultations"
+" are organized between representatives of various specialties when "
+"performing research work. Close ties are maintained with the "
+"International Union for the Study of the Quaternary Period (INQUA)."
+msgstr ""
+"Комиссия по изучению четвертичного периода Российской академии наук организует координацию научных и производственных работ, проводимых организациями, связанными с изучением четвертичного геологического периода. Это осуществляется путём проведения конференций, совещаний и публикации новейших материалов в изданиях комиссии. Кроме того, организуются прямые контакты и консультации между представителями различных специальностей при выполнении научных работ. Поддерживаются тесные связи с Международным союзом по изучению четвертичного периода (INQUA)."
 
-#: templates/index.html:55
-msgid "Publication rules and guidelines."
-msgstr "Правила и рекомендации публикации."
+#: templates/index.html:69
+msgid ""
+"A special feature of the Commission is the involvement of specialists in "
+"various fields in its work: geologists, geographers, permafrost "
+"scientists, soil scientists, archaeologists, paleontologists, "
+"paleobotanists, specialists in physical research methods, etc. The "
+"participation of specialists in various fields, the use of numerous "
+"methods, made it possible to develop many fundamental problems of the "
+"Quaternary period on a multidisciplinary basis."
+msgstr ""
+"Особенностью работы комиссии является привлечение специалистов различных областей: геологов, географов, мерзлотоведов, почвоведов, археологов, палеонтологов, палеоботаников, специалистов по физическим методам исследований и др. Участие специалистов разных направлений и использование множества методов позволили разработать многие фундаментальные проблемы четвертичного периода на междисциплинарной основе."
 
-#: templates/index.html:59
-msgid "Legal terms and user agreement details."
-msgstr "Юридические условия и подробности пользовательского соглашения."
+#: templates/issue_detail.html:6
+msgid "Year"
+msgstr "Год"
 
-#: templates/index.html:63
-msgid "Publication ethics and responsibilities."
-msgstr "Публикационная этика и ответственность."
+#: templates/issue_detail.html:7
+msgid "View PDF"
+msgstr "Открыть PDF"
 
-#: templates/index.html:67
-msgid "Peer review process and guidelines."
-msgstr "Процесс и руководящие принципы рецензирования."
+#: templates/issue_detail.html:9
+msgid "Content of the Issue"
+msgstr "Содержание выпуска"
 
-#: templates/index.html:71
-msgid "Meet our editors on the"
-msgstr "Познакомьтесь с нашими редакторами на"
+#: templates/license.html:6
+msgid "Journal Registered:"
+msgstr "Журнал зарегистрирован:"
 
-#: templates/index.html:71
-msgid "page."
-msgstr "страница."
+#: templates/license.html:8
+msgid "Materials of the journal are available under the license:"
+msgstr "Материалы журнала доступны по лицензии:"
 
-#: templates/index.html:75
-msgid "Information for contributing authors."
-msgstr "Информация для авторов."
+#: templates/license.html:11
+msgid "CC BY-NC-ND 4.0"
+msgstr "CC BY-NC-ND 4.0"
 
-#: templates/index.html:79
-msgid "Copyright and licensing terms."
-msgstr "Условия авторского права и лицензирования."
+#: templates/license.html:15
+msgid "Access under"
+msgstr "Доступ по"
+
+#: templates/license.html:17
+msgid ""
+"Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 "
+"International License"
+msgstr ""
+"Лицензия Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 Всемирная"
+
+#: templates/password_reset.html:2 templates/password_reset.html:8
+msgid "Reset Password"
+msgstr "Сбросить пароль"
+
+#: templates/password_reset.html:11
+msgid "Email Address"
+msgstr "Адрес электронной почты"
+
+#: templates/password_reset.html:14
+msgid "Reset"
+msgstr "Сбросить"
+
+#: templates/profile.html:8
+msgid "Your Profile"
+msgstr "Ваш профиль"
+
+#: templates/profile.html:19 templates/register.html:12
+msgid "Surname"
+msgstr "Фамилия"
+
+#: templates/profile.html:24
+msgid "Surname (en)"
+msgstr "Фамилия (en)"
+
+#: templates/profile.html:32 templates/register.html:16
+msgid "Name"
+msgstr "Имя"
+
+#: templates/profile.html:37
+msgid "Name (en)"
+msgstr "Имя (en)"
+
+#: templates/admin/edit_user.html:29 templates/profile.html:44
+msgid "Patronymic"
+msgstr "Отчество"
+
+#: templates/profile.html:51
+msgid "ORCID"
+msgstr "ORCID"
+
+#: templates/profile.html:56
+msgid "Internet profile (URL)"
+msgstr "Интернет-профиль (URL)"
+
+#: templates/profile.html:64
+msgid "Degrees held"
+msgstr "Учёные степени"
+
+#: templates/profile.html:69
+msgid "Degrees held (en)"
+msgstr "Учёные степени (en)"
+
+#: templates/admin/edit_user.html:67 templates/profile.html:77
+msgid "Occupation"
+msgstr "Род занятий"
+
+#: templates/profile.html:82
+msgid "Occupation (en)"
+msgstr "Род занятий (en)"
+
+#: templates/profile.html:90
+msgid "Position, department, place of work"
+msgstr "Должность, отдел, место работы"
+
+#: templates/profile.html:95
+msgid "Position, department, place of work (en)"
+msgstr "Должность, отдел, место работы (en)"
+
+#: templates/profile.html:103
+msgid "Professional interests"
+msgstr "Профессиональные интересы"
+
+#: templates/profile.html:108
+msgid "Professional interests (en)"
+msgstr "Профессиональные интересы (en)"
+
+#: templates/admin/edit_user.html:96 templates/profile.html:116
+msgid "City"
+msgstr "Город"
+
+#: templates/profile.html:121
+msgid "City (en)"
+msgstr "Город (en)"
+
+#: templates/admin/edit_user.html:105 templates/profile.html:129
+msgid "Address"
+msgstr "Адрес"
+
+#: templates/profile.html:134
+msgid "Address (en)"
+msgstr "Адрес (en)"
+
+#: templates/admin/edit_user.html:114 templates/profile.html:142
+msgid "Country"
+msgstr "Страна"
+
+#: templates/profile.html:147
+msgid "State/Province"
+msgstr "Регион/область"
+
+#: templates/profile.html:154
+msgid "Save changes"
+msgstr "Сохранить изменения"
+
+#: templates/profile.html:160
+msgid "Change password"
+msgstr "Сменить пароль"
+
+#: templates/register.html:32
+msgid "Confirm Password"
+msgstr "Подтвердите пароль"
+
+#: templates/register.html:40
+msgid "I agree to the processing of my personal data"
+msgstr "Я согласен на обработку моих персональных данных"
+
+#: templates/register.html:47
+msgid "I'm not a robot"
+msgstr "Я не робот"
+
+#: templates/submit.html:2
+msgid "Submit Manuscript"
+msgstr "Отправить рукопись"
+
+#: templates/submit.html:6
+msgid "Submit Your Manuscript"
+msgstr "Отправить вашу рукопись"
+
+#: templates/submit.html:8
+msgid "To submit your manuscript, please email it in DOCX or PDF format to:"
+msgstr "Чтобы отправить рукопись, пожалуйста, пришлите её на электронную почту в формате DOCX или PDF:"
+
+#: templates/submit.html:12
+msgid "Please make sure your manuscript follows the author guidelines."
+msgstr "Пожалуйста, убедитесь, что ваша рукопись соответствует правилам для авторов."
+
+#: templates/submit.html:15
+msgid "Download Author Guidelines"
+msgstr "Скачать правила для авторов"
+
+#: templates/terms.html:18
+msgid "Download PDF"
+msgstr "Скачать PDF"
+
+#: templates/admin/edit_user.html:2 templates/admin/edit_user.html:6
+msgid "Edit User"
+msgstr "Редактировать пользователя"
+
+#: templates/admin/edit_user.html:11
+msgid "First Name"
+msgstr "Имя"
+
+#: templates/admin/edit_user.html:15
+msgid "Last Name"
+msgstr "Фамилия"
+
+#: templates/admin/edit_user.html:20
+msgid "First Name (EN)"
+msgstr "Имя (EN)"
+
+#: templates/admin/edit_user.html:24
+msgid "Last Name (EN)"
+msgstr "Фамилия (EN)"
+
+#: templates/admin/edit_user.html:41
+msgid "New Password"
+msgstr "Новый пароль"
+
+#: templates/admin/edit_user.html:42
+msgid "Leave blank to keep current"
+msgstr "Оставьте пустым, чтобы сохранить текущий"
+
+#: templates/admin/edit_user.html:51
+msgid "Internet Profile"
+msgstr "Интернет-профиль"
+
+#: templates/admin/edit_user.html:57
+msgid "Degrees"
+msgstr "Учёные степени"
+
+#: templates/admin/edit_user.html:61
+msgid "Degrees (EN)"
+msgstr "Учёные степени (EN)"
+
+#: templates/admin/edit_user.html:71
+msgid "Occupation (EN)"
+msgstr "Род занятий (EN)"
+
+#: templates/admin/edit_user.html:76
+msgid "Position"
+msgstr "Должность"
+
+#: templates/admin/edit_user.html:80
+msgid "Position (EN)"
+msgstr "Должность (EN)"
+
+#: templates/admin/edit_user.html:86
+msgid "Interests"
+msgstr "Интересы"
+
+#: templates/admin/edit_user.html:90
+msgid "Interests (EN)"
+msgstr "Интересы (EN)"
+
+#: templates/admin/edit_user.html:100
+msgid "City (EN)"
+msgstr "Город (EN)"
+
+#: templates/admin/edit_user.html:109
+msgid "Address (EN)"
+msgstr "Адрес (EN)"
+
+#: templates/admin/edit_user.html:118
+msgid "State"
+msgstr "Регион"
+
+#: templates/admin/edit_user.html:128
+msgid "Administrator"
+msgstr "Администратор"
+
+#: templates/admin/edit_user.html:135
+msgid "Save"
+msgstr "Сохранить"
+
+#: templates/admin/edit_user.html:136
+msgid "Back"
+msgstr "Назад"
 
