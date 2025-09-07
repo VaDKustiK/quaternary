@@ -1,22 +1,37 @@
 {% extends "base.html" %}
 {% block title %}{{ _('Editorial Board') }}{% endblock %}
 {% block content %}
-<div class="container my-5">
-    <h2 class="mb-4 text-center">Editorial Board</h2>
+<div class="row mb-5">
+  <div class="col-lg-8 mb-4">
+    <div class="bg-white p-4 rounded shadow-sm h-100">
+      <h2 class="mb-4 text-center">{{ _('Editorial Board') }}</h2>
 
-    <div class="card shadow p-4">
-        <h4 class="mb-3">Main editors</h4>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">Дегтярёв Кирилл Евгеньевич — главный редактор, председатель Комиссии по изучению четвертичного периода</li>
-            <li class="list-group-item">Тесаков Алексей Сергеевич — заместитель главного редактора</li>
-            <li class="list-group-item">Фролов Павел Дмитриевич — учёный секретарь</li>
-            <li class="list-group-item">Лаврушин Юрий Александрович — ГИН РАН</li>
-            <li class="list-group-item">Панин Андрей Валерьевич — ИГ РАН</li>
-            <li class="list-group-item">Застрожнов Андрей Станиславович — Институт Карпинского</li>
-            <li class="list-group-item">Зыкин Владимир Сергеевич — НГУ</li>
-            <li class="list-group-item">Draženko Nenadić — Белградский университет</li>
-            <li class="list-group-item">Thijs van Kolfschoten — Лейденский университет</li>
-        </ul>
+      <h4 class="mb-3">{{ _('Main editors') }}</h4>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Дегтярёв Кирилл Евгеньевич — главный редактор, председатель Комиссии по изучению четвертичного периода</li>
+        <li class="list-group-item">Тесаков Алексей Сергеевич — заместитель главного редактора</li>
+        <li class="list-group-item">Фролов Павел Дмитриевич — учёный секретарь</li>
+        <li class="list-group-item">Лаврушин Юрий Александрович — ГИН РАН</li>
+        <li class="list-group-item">Панин Андрей Валерьевич — ИГ РАН</li>
+        <li class="list-group-item">Застрожнов Андрей Станиславович — Институт Карпинского</li>
+        <li class="list-group-item">Зыкин Владимир Сергеевич — НГУ</li>
+        <li class="list-group-item">Draženko Nenadić — Белградский университет</li>
+        <li class="list-group-item">Thijs van Kolfschoten — Лейденский университет</li>
+      </ul>
     </div>
+  </div>
+
+  <!-- Sidebar -->
+  <div class="col-lg-4 mb-4">
+    <div class="list-group">
+      <a href="/issues" class="list-group-item list-group-item-action">{{ _('Аrchive') }}</a>
+      <a href="/editorial" class="list-group-item list-group-item-action">{{ _('Editorial Board') }}</a>
+      <a href="/authors" class="list-group-item list-group-item-action">{{ _('Authors') }}</a>
+      <a href="/terms" class="list-group-item list-group-item-action">{{ _('Terms of Use') }}</a>
+      <a href="/ethics" class="list-group-item list-group-item-action">{{ _('Ethics') }}</a>
+      <a href="/submit" class="list-group-item list-group-item-action">{{ _('Submit') }}</a>
+      <a href="/license" class="list-group-item list-group-item-action">{{ _('License Agreement') }}</a>
+    </div>
+  </div>
 </div>
 {% endblock %}
