@@ -13,9 +13,9 @@ BASE_URL = "http://www.ginras.ru/library/papers.php?m=qt&p=0&l=30000"
 
 NAME_RE = re.compile(
     r"""
-    (?P<surname>[А-ЯЁ][а-яё\-]+(?:\s[А-ЯЁ][а-яё\-]+)?)
+    (?P<surname>[А-ЯЁ][а-яё\-]+(?:\s[А-ЯЁ][а-яё\-]+)?)   # surname (maybe double)
     \s+
-    (?P<initials>[А-ЯЁ]\.\s?[А-ЯЁ]\.(?:\s?[А-ЯЁ]\.)?)
+    (?P<initials>[А-ЯЁ]\.\s?[А-ЯЁ]\.(?:\s?[А-ЯЁ]\.)?)     # initials like A.A. or A.А.Б.
     """,
     re.VERBOSE,
 )
@@ -26,7 +26,7 @@ SEP_RE = re.compile(r"\s*(?:,|и)\s+")
 def parse_line(line: str):
     """
     Extract consecutive author names from the *beginning* of the line.
-    Returns (authors: list[str], article_title: str) or ([], "") if not matched.
+    Returns (authors: list[str], article_title: str).
     """
     idx = 0
     authors = []
@@ -49,7 +49,13 @@ def parse_line(line: str):
     if not authors:
         return [], ""
 
+    # Remaining part = supposed to be the article title
     title = line[idx:].strip(" —-–.:\u00a0 ").strip()
+
+    # If the "title" looks like just another name, skip
+    if NAME_RE.match(title):
+        return authors, ""
+
     return authors, title
 
 
@@ -72,12 +78,14 @@ def scrape_authors():
     count_authors_new = 0
 
     blocks = soup.select("span.txt")
-    logger.info(f"Found {len(blocks)} issue blocks to scan for contents.")
+    logger.info(f"Found {len(blocks)} issue blocks to scan.")
 
     for span in blocks:
+        # --- Issue title + link ---
         link = span.find("a", href=True)
         if not link:
             continue
+        issue_title = link.get_text(strip=True)
         issue_pdf_url = link.get("href", "").strip()
         if issue_pdf_url and not issue_pdf_url.startswith("http"):
             issue_pdf_url = "http://www.ginras.ru/" + issue_pdf_url.lstrip("/")
@@ -99,7 +107,6 @@ def scrape_authors():
             if not authors or not article_title:
                 continue
 
-            # Save each author and the article
             for name in authors:
                 author_obj = authors_cache.get(name)
                 if not author_obj:
@@ -111,7 +118,12 @@ def scrape_authors():
                         count_authors_new += 1
                     authors_cache[name] = author_obj
 
-                session.add(Article(title=article_title, url=issue_pdf_url, author=author_obj))
+                # Save article with link and issue context
+                session.add(Article(
+                    title=f"{article_title} ({issue_title})",
+                    url=issue_pdf_url,
+                    author=author_obj
+                ))
                 count_articles += 1
 
     session.commit()
