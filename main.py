@@ -20,7 +20,7 @@ load_dotenv()
 app.secret_key = os.getenv("SECRET_KEY")
 
 # Configuration for Babel (i18n)
-app.config['BABEL_DEFAULT_LOCALE'] = 'en'
+app.config['BABEL_DEFAULT_LOCALE'] = 'ru'
 app.config['BABEL_SUPPORTED_LOCALES'] = ['en', 'ru']
 
 babel = Babel()
@@ -34,8 +34,8 @@ def get_locale():
         session["lang"] = lang
         return lang
     
-    return request.accept_languages.best_match(app.config['BABEL_SUPPORTED_LOCALES'])
-
+    # return request.accept_languages.best_match(app.config['BABEL_SUPPORTED_LOCALES'])
+    return 'ru'
 
 babel.init_app(app, locale_selector=get_locale)
 
