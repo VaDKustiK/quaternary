@@ -3,10 +3,10 @@
 {% block content %}
 <div class="bg-white p-4 rounded shadow-sm mb-4">
   <h2 class="mb-3">{{ issue.title }}</h2>
-  <p><strong>{{ _('Year') }}:</strong> {{ issue.year }}</p>
-  <a href="{{ issue.pdf_url }}" class="btn btn-primary mb-4" target="_blank">{{ _('View PDF') }}</a>
+  <p><strong>{{ _('Год') }}:</strong> {{ issue.year }}</p>
+  <a href="{{ issue.pdf_url }}" class="btn btn-primary mb-4" target="_blank">{{ _('Открыть PDF') }}</a>
 
-  <h4>{{ _('Content of the Issue') }}</h4>
+  <h4>{{ _('Содержание выпуска') }}</h4>
   <div class="border p-3">
     {{ issue.content_html | safe }}
   </div>

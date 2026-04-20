@@ -1,14 +1,14 @@
 {% extends "base.html" %}
-{% block title %}{{ _('Contact Us') }}{% endblock %}
+{% block title %}{{ _('Связаться с нами') }}{% endblock %}
 {% block content %}
 <div class="container mt-5 text-center">
-    <h2>{{ _("Contact Us") }}</h2>
+    <h2>{{ _("Связаться с нами") }}</h2>
     <p class="mt-3">
-        {{ _("If you want to contact us, please send an email to") }}
+        {{ _("Если вы хотите связаться с нами, пожалуйста, отправьте письмо на") }}
         <strong>{{ email }}</strong>
     </p>
     <a href="mailto:{{ email }}" class="btn btn-primary mt-3">
-        {{ _("Send Email") }}
+        {{ _("Отправить письмо") }}
     </a>
 </div>
 {% endblock %}

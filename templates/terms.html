@@ -1,9 +1,9 @@
 {% extends "base.html" %}
-{% block title %}{{ _("Terms of Use") }}{% endblock %}
+{% block title %}{{ _("Правила") }}{% endblock %}
 
 {% block content %}
 <div class="container my-5">
-    <h2 class="text-center mb-4">{{ _("Terms of Use") }}</h2>
+    <h2 class="text-center mb-4">{{ _("Правила") }}</h2>
     <div class="card shadow-lg">
         <div class="card-body text-center">
             <iframe src="{{ url_for('static', filename='pdf/terms_of_use_quaternary.pdf') }}"
@@ -15,7 +15,7 @@
                 <a class="btn btn-outline-primary"
                    href="{{ url_for('static', filename='pdf/terms_of_use_quaternary.pdf') }}"
                    target="_blank">
-                   {{ _("Download PDF") }}
+                   {{ _("Скачать PDF") }}
                 </a>
             </div>
         </div>

@@ -1,9 +1,9 @@
 {% extends "base.html" %}
-{% block title %}{{ _("Ethics") }}{% endblock %}
+{% block title %}{{ _("Этика") }}{% endblock %}
 
 {% block content %}
 <div class="container my-5">
-    <h2 class="text-center mb-4">Ethics</h2>
+    <h2 class="text-center mb-4">{{ _("Этика") }}</h2>
     <div class="card shadow-lg">
         <div class="card-body text-center">
             <iframe src="{{ url_for('static', filename='pdf/ethics_quaternary.pdf') }}"
@@ -15,7 +15,7 @@
                 <a class="btn btn-outline-primary"
                    href="{{ url_for('static', filename='pdf/ethics_quaternary.pdf') }}"
                    target="_blank">
-                   Download PDF
+                   {{ _('Скачать PDF') }}
                 </a>
             </div>
         </div>
