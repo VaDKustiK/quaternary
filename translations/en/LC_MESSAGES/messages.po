@@ -1,4 +1,4 @@
-# Russian translations for PROJECT.
+# English translations for PROJECT.
 # Copyright (C) 2025 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
@@ -8,12 +8,11 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-04-20 21:05+0300\n"
-"PO-Revision-Date: 2025-08-28 18:11+0300\n"
+"PO-Revision-Date: 2026-04-20 21:04+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: ru\n"
-"Language-Team: ru <LL@li.org>\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -22,7 +21,7 @@ msgstr ""
 #: templates/about.html:2 templates/about.html:9 templates/base.html:26
 #: templates/index.html:20
 msgid "О журнале"
-msgstr ""
+msgstr "About"
 
 #: templates/about.html:10
 msgid ""
@@ -51,55 +50,83 @@ msgid ""
 " английским резюме, ключевыми словами и библиографией, некоторые статьи "
 "публикуются на английском языке с расширенным русским резюме."
 msgstr ""
+"Bulletin of the Commission for Study of the Quaternary (BCSQ) (Rus. "
+"Бюллетень Комиссии по изучению четвертичного периода (БКИЧП), Fr. "
+"Bulletin de la Commission pour l'Etude du Quaternaire) – is an annual "
+"scientific publication (serial title), publishing papers, reviews, "
+"conference materials and a chronicle about the Quaternary geological "
+"period (the Quaternary System). The Bulletin covers fundamental, global "
+"and regional problems of the Quaternary Science. Papers related to all "
+"aspects of quaternary geology, stratigraphy, geotectonic, sedimentology, "
+"paleontology, paleogeography, geomorphology, permafrost study, paleo soil"
+" study, archeology, etс. The Bulletin is fully open access with double-"
+"blind peer-reviewed publications.<br><br>The Bulletin founded by the "
+"Commission for the Study of the Quaternary of the Academy of Sciences of "
+"the USSR (1929) as a professional academic publication. It is the "
+"longest-running journal related to the Quaternary research. There were "
+"1/3 releases of the Bulletin published almost annually, 75 issues, "
+"available in the online archive. The founders of the bulletin are the "
+"Commission for the Study of the Quaternary Period of the Russian Academy "
+"of Sciences (RAS) and the Geological Institute RAS. The Bulletin is "
+"included to the Russian Science Citation Index (Elibrary) and is in a "
+"process of registration to the international bibliographic database "
+"(Scopus). Printed by the GEOS Publishing House, print ISSN 0366-0907, and"
+" library heading: The Quaternary System.<br><br>The editorial office is "
+"located in the Geological Institute RAS, the Bulletin website with "
+"information in Russian and English. The editorial board includes leading "
+"scientists; the chief editor is the chairman of the Commission for the "
+"Study of the Quaternary period Dr. Yu.A. Lavrushin. Since 2018, papers "
+"published with English summary, keywords and bibliography, some articles "
+"published in English with an expanded Russian summary."
 
 #: templates/about.html:55 templates/archive.html:2 templates/archive.html:7
 #: templates/archive.html:44 templates/authors.html:43 templates/base.html:27
 #: templates/editorial_board.html:39 templates/index.html:37
 #: templates/submit.html:20
 msgid "Архив"
-msgstr ""
+msgstr "Archive"
 
 #: templates/about.html:56 templates/archive.html:45 templates/authors.html:44
 #: templates/base.html:28 templates/editorial_board.html:2
 #: templates/editorial_board.html:7 templates/editorial_board.html:40
 #: templates/index.html:38 templates/submit.html:21
 msgid "Редакционная коллегия"
-msgstr ""
+msgstr "Editorial Board"
 
 #: templates/about.html:57 templates/archive.html:46 templates/authors.html:2
 #: templates/authors.html:8 templates/authors.html:45
 #: templates/editorial_board.html:41 templates/index.html:39
 #: templates/submit.html:22
 msgid "Авторы"
-msgstr ""
+msgstr "Authors"
 
 #: templates/about.html:58 templates/archive.html:47 templates/authors.html:46
 #: templates/editorial_board.html:42 templates/index.html:40
 #: templates/submit.html:23 templates/terms.html:2 templates/terms.html:6
 msgid "Правила"
-msgstr ""
+msgstr "Terms of Use"
 
 #: templates/about.html:59 templates/archive.html:48 templates/authors.html:47
 #: templates/editorial_board.html:43 templates/ethics.html:2
 #: templates/ethics.html:6 templates/index.html:41 templates/submit.html:24
 msgid "Этика"
-msgstr ""
+msgstr "Ethics"
 
 #: templates/about.html:60 templates/archive.html:49 templates/authors.html:48
 #: templates/editorial_board.html:44 templates/index.html:42
 #: templates/submit.html:25
 msgid "Подать статью"
-msgstr ""
+msgstr "Submit"
 
 #: templates/about.html:61 templates/archive.html:50 templates/authors.html:49
 #: templates/editorial_board.html:45 templates/index.html:43
 #: templates/license.html:2 templates/license.html:5 templates/submit.html:26
 msgid "Регистрации"
-msgstr ""
+msgstr "License Agreement"
 
 #: templates/about.html:70
 msgid "Четвертичный период"
-msgstr ""
+msgstr "The Quaternary Period"
 
 #: templates/about.html:71
 msgid ""
@@ -108,6 +135,10 @@ msgid ""
 "современный этап истории Земли, третий (нынешний) период кайнозойской "
 "эры. Начался 2,58 миллиона лет назад и продолжается по настоящее время."
 msgstr ""
+"The Quaternary period, or Anthropogene (Quaternary system; Anthropogenic "
+"period; Quaternary) is a geological period (geological system), the "
+"modern stage of the Earth's history, the third (current) period of the "
+"Cenozoic era. It began 2.58 million years ago and continues to this day."
 
 #: templates/about.html:77
 msgid ""
@@ -121,75 +152,84 @@ msgid ""
 "другими геологическими периодами привела к возникновению особой отрасли "
 "геологии — четвертичной науки."
 msgstr ""
+"This is the shortest geological period, but it was in the Quaternary that"
+" most modern landforms were formed in their modern form and many "
+"significant events in the history of the Earth (from the point of view of"
+" man) occurred, the most important of which are the glaciation periods "
+"and the emergence of man. In such a short time interval, radiocarbon "
+"analysis and other methods based on the decay of short-lived isotopes are"
+" used primarily to determine age. The specificity of the Quaternary "
+"period compared to other geological periods created a special branch of "
+"geology – Quaternary."
 
 #: templates/base.html:17
-msgid "BCSQ"
-msgstr "БКИЧП"
+msgid "БКИЧП"
+msgstr "BCSQ"
 
 #: templates/base.html:48 templates/base.html:72 templates/profile.html:2
 msgid "Профиль"
-msgstr ""
+msgstr "Profile"
 
 #: templates/base.html:50 templates/base.html:64 templates/base.html:91
 msgid "Войти"
-msgstr ""
+msgstr "Login"
 
 #: templates/base.html:62
 msgid "Аккаунт"
-msgstr ""
+msgstr "Account"
 
 #: templates/base.html:73
 msgid "Мои публикации"
-msgstr ""
+msgstr "My Publications"
 
 #: templates/base.html:76
 msgid "Панель администратора"
-msgstr ""
+msgstr "Admin Panel"
 
 #: templates/base.html:79
 msgid "Выйти"
-msgstr ""
+msgstr "Log out"
 
 #: templates/base.html:84 templates/profile.html:12 templates/register.html:22
 msgid "Электронная почта"
-msgstr ""
+msgstr "Email"
 
 #: templates/base.html:88 templates/register.html:28
 msgid "Пароль"
-msgstr ""
+msgstr "Password"
 
 #: templates/base.html:93
 msgid "Забыли пароль?"
-msgstr ""
+msgstr "Forgot your password?"
 
 #: templates/base.html:94 templates/register.html:2 templates/register.html:8
 #: templates/register.html:51
 msgid "Регистрация"
-msgstr ""
+msgstr "Register"
 
 #: templates/base.html:124 templates/index.html:5
 msgid "Бюллетень Комиссии по изучению четвертичного периода"
-msgstr ""
+msgstr "Bulletin of the Commission for Study of the Quaternary"
 
 #: templates/base.html:127 templates/contact.html:2 templates/contact.html:5
 msgid "Связаться с нами"
-msgstr ""
+msgstr "Contact Us"
 
 #: templates/base.html:130
 msgid "Геологический институт"
-msgstr ""
+msgstr "Geological Institute"
 
 #: templates/base.html:133
 msgid "Российская Академия Наук"
-msgstr ""
+msgstr "Russian Academy of Sciences"
 
 #: templates/contact.html:7
 msgid "Если вы хотите связаться с нами, пожалуйста, отправьте письмо на"
-msgstr ""
+msgstr "If you want to contact us, please send an email to"
 
 #: templates/contact.html:11
 msgid "Отправить письмо"
-msgstr ""
+msgstr "Send Email"
 
 #: templates/editorial_board.html:9
 msgid ""
@@ -197,150 +237,199 @@ msgid ""
 "Комиссии по изучению четвертичного периода)  —  академик РАН. "
 "Геологический институт РАН (ГИН РАН)"
 msgstr ""
+"<b>Degtyarev Kirill Evgenievich</b> – Editor-in-Chief (Chairman of the "
+"Commission for the Study of the Quaternary Period), Academician of the "
+"Russian Academy of Sciences (RAS), Geological Institute of the Russian "
+"Academy of Sciences (GIN RAS)"
 
 #: templates/editorial_board.html:10
 msgid ""
 "<b>Тесаков Алексей Сергеевич</b>, заместитель главного редактора — д. "
 "г.-м. н., Геологический институт РАН (ГИН РАН)"
 msgstr ""
+"<b>Tesakov Alexey Sergeevich</b> – Deputy Editor-in-Chief, Doctor of "
+"Geological and Mineralogical Sciences, Geological Institute of the "
+"Russian Academy of Sciences (GIN RAS)"
 
 #: templates/editorial_board.html:11
 msgid ""
 "<b>Амирханов Хизри Амирханович</b> – академик РАН. Институт археологии "
 "РАН (ИА РАН)"
 msgstr ""
+"<b>Amirkhanov Khizri Amirkhanovich</b> – Academician of the Russian "
+"Academy of Sciences (RAS), Institute of Archaeology of the Russian "
+"Academy of Sciences (IA RAS)"
 
 #: templates/editorial_board.html:12
 msgid ""
 "<b>Матишов Геннадий Григорьевич</b> – академик РАН, ФИЦ «Южный научный "
 "центр РАН» (ЮНЦ РАН)"
 msgstr ""
+"<b>Matishov Gennady Grigorievich</b> – Academician of the Russian Academy "
+"of Sciences (RAS), Federal Research Center \"Southern Scientific Center of"
+" the Russian Academy of Sciences\" (SSC RAS)"
 
 #: templates/editorial_board.html:13
 msgid ""
 "<b>Панин Андрей Валерьевич</b> – член-корреспондент РАН. Институт "
 "географии РАН (ИГ РАН)"
 msgstr ""
+"<b>Panin Andrey Valerievich</b> – Corresponding Member of the Russian "
+"Academy of Sciences (RAS), Institute of Geography of the Russian Academy "
+"of Sciences (IG RAS)"
 
 #: templates/editorial_board.html:14
 msgid ""
 "<b>Соломина Ольга Николаевна</b> – член-корреспондент РАН. Институт "
 "географии РАН (ИГ РАН)"
 msgstr ""
+"<b>Solomina Olga Nikolaevna</b> – Corresponding Member of the Russian "
+"Academy of Sciences (RAS), Institute of Geography of the Russian Academy "
+"of Sciences (IG RAS)"
 
 #: templates/editorial_board.html:15
 msgid "<b>Голосов Валентин Николаевич</b> – д. г. н., МГУ им. М.В. Ломоносова"
-msgstr ""
+msgstr "<b>Golosov Valentin Nikolaevich</b> – Doctor of Geographical Sciences, Lomonosov Moscow State University (MSU)"
 
 #: templates/editorial_board.html:16
 msgid "<b>Янина Тамара Алексеевна</b> – д. г. н., МГУ им. М.В. Ломоносова"
-msgstr ""
+msgstr "<b>Yanina Tamara Alekseevna</b> – Doctor of Geographical Sciences, Lomonosov Moscow State University (MSU)"
 
 #: templates/editorial_board.html:17
 msgid "<b>Субетто Дмитрий Александрович</b> – д. г. н., РГПУ им. А.И. Герцена"
-msgstr ""
+msgstr "<b>Subetto Dmitry Alexandrovich</b> – Doctor of Geographical Sciences, Herzen State Pedagogical University of Russia"
 
 #: templates/editorial_board.html:18
 msgid ""
 "<b>Матуль Александр Геннадьевич</b> – д. г.-м. н., Институт океанологии "
 "им. П.П. Ширшова РАН (ИО РАН)"
 msgstr ""
+"<b>Matul Alexander Gennadievich</b> – Doctor of Geological and "
+"Mineralogical Sciences, Shirshov Institute of Oceanology of the Russian "
+"Academy of Sciences (IO RAS)"
 
 #: templates/editorial_board.html:19
 msgid "<b>Макеев Александр Олегович</b> – д. б. н., МГУ им. М.В. Ломоносова"
-msgstr ""
+msgstr "<b>Makeev Alexander Olegovich</b> – Doctor of Biological Sciences, Lomonosov Moscow State University (MSU)"
 
 #: templates/editorial_board.html:20
 msgid ""
 "<b>Зольников Иван Дмитриевич</b> – д. г.-м. н., Институт геологии и "
 "минералогии им. В.С. Соболева СО РАН (ИГМ СО РАН)"
 msgstr ""
+"<b>Zolnikov Ivan Dmitrievich</b> – Doctor of Geological and Mineralogical "
+"Sciences, Sobolev Institute of Geology and Mineralogy of the Siberian "
+"Branch of the Russian Academy of Sciences (IGM SB RAS)"
 
 #: templates/editorial_board.html:21
 msgid ""
 "<b>Разжигаева Надежда Глебовна</b> – д. г. н., Тихоокеанский институт "
 "географии ДВО РАН (ТИГ ДВО РАН)"
 msgstr ""
+"<b>Razzhigaeva Nadezhda Glebovna</b> – Doctor of Geographical Sciences, "
+"Pacific Institute of Geography of the Far Eastern Branch of the Russian "
+"Academy of Sciences (PIG FEB RAS)"
 
 #: templates/editorial_board.html:22
 msgid ""
 "<b>Данукалова Гузель Анваровна</b> – к. г.-м. н., Институт геологии "
 "Уфимский федеральный исследовательский центр РАН (ИГ УНЦ РАН)"
 msgstr ""
+"<b>Danukalova Guzel Anvarovna</b> – Candidate of Geological and "
+"Mineralogical Sciences, Institute of Geology, Ufa Federal Research Centre"
+" of the Russian Academy of Sciences (IG UFRC RAS)"
 
 #: templates/editorial_board.html:23
 msgid ""
 "<b>Зыкин Владимир Сергеевич</b> – д. г.-м. н., Институт геологии и "
 "минералогии им. В. С. Соболева СО РАН (ИГМ СО РАН)"
 msgstr ""
+"<b>Zykin Vladimir Sergeevich</b> – Doctor of Geological and Mineralogical"
+" Sciences, Sobolev Institute of Geology and Mineralogy of the Siberian "
+"Branch of the Russian Academy of Sciences (IGM SB RAS)"
 
 #: templates/editorial_board.html:24
 msgid ""
 "<b>Титов Вадим Владимирович</b> – к. б. н., ФИЦ «Южный научный центр РАН»"
 " (ЮНЦ РАН)"
 msgstr ""
+"<b>Titov Vadim Vladimirovich</b> – Candidate of Biological Sciences, "
+"Federal Research Center Southern Scientific Center of the Russian Academy"
+" of Sciences (SSC RAS)"
 
 #: templates/editorial_board.html:25
 msgid ""
 "<b>Зеленин Егор Александрович</b> – к. г.-м. н., Геологический институт "
 "РАН (ГИН РАН)"
 msgstr ""
+"<b>Zelenin Egor Alexandrovich</b> – Candidate of Geological and "
+"Mineralogical Sciences, Geological Institute of the Russian Academy of "
+"Sciences (GIN RAS)"
 
 #: templates/editorial_board.html:26
 msgid "<b>Курбанов Реджеп Нурмурадович</b> – к. г. н., МГУ им. М.В. Ломоносова"
-msgstr ""
+msgstr "<b>Kurbanov Rejep Nurmuradovich</b> – Candidate of Geographical Sciences, Lomonosov Moscow State University (MSU)"
 
 #: templates/editorial_board.html:27
 msgid ""
 "<b>Фролов Павел Дмитриевич</b> – к. г.-м. н., Геологический институт РАН "
 "(ГИН РАН)"
 msgstr ""
+"<b>Frolov Pavel Dmitrievich</b> – Candidate of Geological and "
+"Mineralogical Sciences, Geological Institute of the Russian Academy of "
+"Sciences (GIN RAS)"
 
 #: templates/editorial_board.html:28
 msgid "<b>Болиховская Наталия Степановна</b> – д. г. н., МГУ им. М.В. Ломоносова"
-msgstr ""
+msgstr "<b>Bolikhovskaya Natalia Stepanovna</b> – Doctor of Geographical Sciences, Lomonosov Moscow State University (MSU)"
 
 #: templates/editorial_board.html:29
 msgid ""
 "<b>Второв Иван Петрович</b> – к. г. н., Геологический институт РАН (ГИН "
 "РАН)"
 msgstr ""
+"<b>Vtorov Ivan Petrovich</b> – Candidate of Geographical Sciences, "
+"Geological Institute of the Russian Academy of Sciences (GIN RAS)"
 
 #: templates/editorial_board.html:30
 msgid "<b>Сенькова Елена Николаевна</b> – Геологический институт РАН (ГИН РАН)"
-msgstr ""
+msgstr "<b>Senkova Elena Nikolaevna</b> – Geological Institute of the Russian Academy of Sciences (GIN RAS)"
 
 #: templates/editorial_board.html:31
 msgid ""
 "<b>Draženko Nenadić</b> (Драженко Ненадић) – профессор, Белградский "
 "университет (Белград, Сербия)"
 msgstr ""
+"<b>Draženko Nenadić</b> (Драженко Ненадић) – Professor, University of "
+"Belgrade (Belgrade, Serbia)"
 
 #: templates/editorial_board.html:32
 msgid ""
 "<b>Thijs van Kolfschoten</b> – профессор, Лейденский университет (Лейден,"
 " Нидерланды)"
 msgstr ""
+"<b>Thijs van Kolfschoten</b> – Professor, Leiden University (Leiden, "
+"Netherlands)"
 
 #: templates/ethics.html:18 templates/terms.html:18
 msgid "Скачать PDF"
-msgstr ""
+msgstr "Download PDF"
 
 #: templates/index.html:2
 msgid "Главная"
-msgstr ""
+msgstr "Home"
 
 #: templates/index.html:6
 msgid "Геологический институт РАН (ГИН РАН)"
-msgstr ""
+msgstr "RAS Geological Institute (GIN RAS)"
 
 #: templates/index.html:9
 msgid "Смотреть последнее издание"
-msgstr ""
+msgstr "View Latest Issue"
 
 #: templates/index.html:11
 msgid "Издания пока недоступны."
-msgstr ""
+msgstr "No issues available yet."
 
 #: templates/index.html:22
 msgid ""
@@ -354,10 +443,21 @@ msgid ""
 "древних почв, археологии и др. Бюллетень полностью открыт для доступа, "
 "публикации проходят двойное слепое рецензирование."
 msgstr ""
+"Bulletin of the Commission for Study of the Quaternary (BCSQ) (Rus. "
+"Бюллетень Комиссии по изучению четвертичного периода (БКИЧП), Fr. "
+"Bulletin de la Commission pour l'Etude du Quaternaire) – is an annual "
+"scientific publication (serial title), publishing papers, reviews, "
+"conference materials and a chronicle about the Quaternary geological "
+"period (the Quaternary System). The Bulletin covers fundamental, global "
+"and regional problems of the Quaternary Science. Papers related to all "
+"aspects of quaternary geology, stratigraphy, geotectonic, sedimentology, "
+"paleontology, paleogeography, geomorphology, permafrost study, paleo soil"
+" study, archeology, etс. The Bulletin is fully open access with double-"
+"blind peer-reviewed publications."
 
 #: templates/index.html:56
 msgid "О комиссии"
-msgstr ""
+msgstr "About Commission"
 
 #: templates/index.html:58
 msgid ""
@@ -371,6 +471,15 @@ msgid ""
 "тесные связи с Международным союзом по изучению четвертичного периода "
 "(INQUA)."
 msgstr ""
+"The Commission for the Study of the Quaternary Period of the Russian "
+"Academy of Sciences organizes the coordination of research and production"
+" work carried out by organizations associated with the study of the "
+"Quaternary geological period. This is done by convening conferences, "
+"meetings, etc., as well as publishing the latest materials in the "
+"Commission's publications. In addition, direct contacts and consultations"
+" are organized between representatives of various specialties when "
+"performing research work. Close ties are maintained with the "
+"International Union for the Study of the Quaternary Period (INQUA)."
 
 #: templates/index.html:64
 msgid ""
@@ -382,26 +491,33 @@ msgid ""
 "фундаментальные проблемы четвертичного периода на междисциплинарной "
 "основе."
 msgstr ""
+"A special feature of the Commission is the involvement of specialists in "
+"various fields in its work: geologists, geographers, permafrost "
+"scientists, soil scientists, archaeologists, paleontologists, "
+"paleobotanists, specialists in physical research methods, etc. The "
+"participation of specialists in various fields, the use of numerous "
+"methods, made it possible to develop many fundamental problems of the "
+"Quaternary period on a multidisciplinary basis."
 
 #: templates/issue_detail.html:6
 msgid "Год"
-msgstr ""
+msgstr "Year"
 
 #: templates/issue_detail.html:7
 msgid "Открыть PDF"
-msgstr ""
+msgstr "View PDF"
 
 #: templates/issue_detail.html:9
 msgid "Содержание выпуска"
-msgstr ""
+msgstr "Content of the Issue"
 
 #: templates/license.html:6
 msgid "Журнал зарегистрирован:"
-msgstr ""
+msgstr "Journal Registered:"
 
 #: templates/license.html:14
 msgid "Материалы журнала доступны по лицензии:"
-msgstr ""
+msgstr "Materials of the journal are available under the license:"
 
 #: templates/license.html:17
 msgid "CC BY-NC-ND 4.0"
@@ -409,52 +525,51 @@ msgstr "CC BY-NC-ND 4.0"
 
 #: templates/license.html:21
 msgid "Access under"
-msgstr "Доступ по"
+msgstr ""
 
 #: templates/license.html:23
-#, fuzzy
 msgid ""
 "Лицензия Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 "
 "Всемирная"
 msgstr ""
-"Лицензия Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 "
-"Всемирная"
+"Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 "
+"International License"
 
 #: templates/password_reset.html:2 templates/password_reset.html:8
 msgid "Сбросить пароль"
-msgstr ""
+msgstr "Reset Password"
 
 #: templates/password_reset.html:11
 msgid "Адрес электронной почты"
-msgstr ""
+msgstr "Email Address"
 
 #: templates/password_reset.html:14
 msgid "Сбросить"
-msgstr ""
+msgstr "Reset"
 
 #: templates/profile.html:8
 msgid "Ваш профиль"
-msgstr ""
+msgstr "Your Profile"
 
 #: templates/profile.html:19 templates/register.html:12
 msgid "Фамилия"
-msgstr ""
+msgstr "Surname"
 
 #: templates/profile.html:24
 msgid "Фамилия (en)"
-msgstr ""
+msgstr "Surname (en)"
 
 #: templates/profile.html:32 templates/register.html:16
 msgid "Имя"
-msgstr ""
+msgstr "Name"
 
 #: templates/profile.html:37
 msgid "Имя (en)"
-msgstr ""
+msgstr "Name (en)"
 
 #: templates/profile.html:44
 msgid "Отчество"
-msgstr ""
+msgstr "Patronymic"
 
 #: templates/profile.html:51
 msgid "ORCID"
@@ -462,702 +577,209 @@ msgstr "ORCID"
 
 #: templates/profile.html:56
 msgid "Интернет-профиль (URL)"
-msgstr ""
+msgstr "Internet profile (URL)"
 
 #: templates/profile.html:64
 msgid "Учёные степени"
-msgstr ""
+msgstr "Degrees held"
 
 #: templates/profile.html:69
 msgid "Учёные степени (en)"
-msgstr ""
+msgstr "Degrees held (en)"
 
 #: templates/profile.html:77
 msgid "Род занятий"
-msgstr ""
+msgstr "Occupation"
 
 #: templates/profile.html:82
 msgid "Род занятий (en)"
-msgstr ""
+msgstr "Occupation (en)"
 
 #: templates/profile.html:90
 msgid "Должность, отдел, место работы"
-msgstr ""
+msgstr "Position, department, place of work"
 
 #: templates/profile.html:95
 msgid "Должность, отдел, место работы (en)"
-msgstr ""
+msgstr "Position, department, place of work (en)"
 
 #: templates/profile.html:103
 msgid "Профессиональные интересы"
-msgstr ""
+msgstr "Professional interests"
 
 #: templates/profile.html:108
 msgid "Профессиональные интересы (en)"
-msgstr ""
+msgstr "Professional interests (en)"
 
 #: templates/profile.html:116
 msgid "Город"
-msgstr ""
+msgstr "City"
 
 #: templates/profile.html:121
 msgid "Город (en)"
-msgstr ""
+msgstr "City (en)"
 
 #: templates/profile.html:129
 msgid "Адрес"
-msgstr ""
+msgstr "Address"
 
 #: templates/profile.html:134
 msgid "Адрес (en)"
-msgstr ""
+msgstr "Address (en)"
 
 #: templates/profile.html:142
 msgid "Страна"
-msgstr ""
+msgstr "Country"
 
 #: templates/profile.html:147
 msgid "Регион/область"
-msgstr ""
+msgstr "State/Province"
 
 #: templates/profile.html:154
 msgid "Сохранить изменения"
-msgstr ""
+msgstr "Save changes"
 
 #: templates/profile.html:160
 msgid "Сменить пароль"
-msgstr ""
+msgstr "Change password"
 
 #: templates/register.html:32
 msgid "Подтвердите пароль"
-msgstr ""
+msgstr "Confirm Password"
 
 #: templates/register.html:40
 msgid "Я согласен на обработку моих персональных данных"
-msgstr ""
+msgstr "I agree to the processing of my personal data"
 
 #: templates/register.html:47
 msgid "Я не робот"
-msgstr ""
+msgstr "I'm not a robot"
 
 #: templates/submit.html:2
 msgid "Отправить рукопись"
-msgstr ""
+msgstr "Submit Manuscript"
 
 #: templates/submit.html:8
 msgid "Отправить вашу рукопись"
-msgstr ""
+msgstr "Submit Your Manuscript"
 
 #: templates/submit.html:10
 msgid ""
 "Чтобы отправить рукопись, пожалуйста, пришлите её на электронную почту в "
 "формате DOCX или PDF:"
-msgstr ""
+msgstr "To submit your manuscript, please email it in DOCX or PDF format to:"
 
 #: templates/submit.html:14
 msgid ""
 "Пожалуйста, убедитесь, что ваша рукопись соответствует правилам для "
 "авторов."
-msgstr ""
+msgstr "Please make sure your manuscript follows the author guidelines."
 
 #: templates/admin/edit_user.html:2 templates/admin/edit_user.html:6
 msgid "Edit User"
-msgstr "Редактировать пользователя"
+msgstr ""
 
 #: templates/admin/edit_user.html:11
 msgid "First Name"
-msgstr "Имя"
+msgstr ""
 
 #: templates/admin/edit_user.html:15
 msgid "Last Name"
-msgstr "Фамилия"
+msgstr ""
 
 #: templates/admin/edit_user.html:20
 msgid "First Name (EN)"
-msgstr "Имя (EN)"
+msgstr ""
 
 #: templates/admin/edit_user.html:24
 msgid "Last Name (EN)"
-msgstr "Фамилия (EN)"
+msgstr ""
 
 #: templates/admin/edit_user.html:29
 msgid "Patronymic"
-msgstr "Отчество"
+msgstr ""
 
 #: templates/admin/edit_user.html:35
 msgid "Email"
-msgstr "Электронная почта"
+msgstr ""
 
 #: templates/admin/edit_user.html:41
 msgid "New Password"
-msgstr "Новый пароль"
+msgstr ""
 
 #: templates/admin/edit_user.html:42
 msgid "Leave blank to keep current"
-msgstr "Оставьте пустым, чтобы сохранить текущий"
+msgstr ""
 
 #: templates/admin/edit_user.html:51
 msgid "Internet Profile"
-msgstr "Интернет-профиль"
+msgstr ""
 
 #: templates/admin/edit_user.html:57
 msgid "Degrees"
-msgstr "Учёные степени"
+msgstr ""
 
 #: templates/admin/edit_user.html:61
 msgid "Degrees (EN)"
-msgstr "Учёные степени (EN)"
+msgstr ""
 
 #: templates/admin/edit_user.html:67
 msgid "Occupation"
-msgstr "Род занятий"
+msgstr ""
 
 #: templates/admin/edit_user.html:71
 msgid "Occupation (EN)"
-msgstr "Род занятий (EN)"
+msgstr ""
 
 #: templates/admin/edit_user.html:76
 msgid "Position"
-msgstr "Должность"
+msgstr ""
 
 #: templates/admin/edit_user.html:80
 msgid "Position (EN)"
-msgstr "Должность (EN)"
+msgstr ""
 
 #: templates/admin/edit_user.html:86
 msgid "Interests"
-msgstr "Интересы"
+msgstr ""
 
 #: templates/admin/edit_user.html:90
 msgid "Interests (EN)"
-msgstr "Интересы (EN)"
+msgstr ""
 
 #: templates/admin/edit_user.html:96
 msgid "City"
-msgstr "Город"
+msgstr ""
 
 #: templates/admin/edit_user.html:100
 msgid "City (EN)"
-msgstr "Город (EN)"
+msgstr ""
 
 #: templates/admin/edit_user.html:105
 msgid "Address"
-msgstr "Адрес"
+msgstr ""
 
 #: templates/admin/edit_user.html:109
 msgid "Address (EN)"
-msgstr "Адрес (EN)"
+msgstr ""
 
 #: templates/admin/edit_user.html:114
 msgid "Country"
-msgstr "Страна"
+msgstr ""
 
 #: templates/admin/edit_user.html:118
 msgid "State"
-msgstr "Регион"
+msgstr ""
 
 #: templates/admin/edit_user.html:128
 msgid "Administrator"
-msgstr "Администратор"
+msgstr ""
 
 #: templates/admin/edit_user.html:135
 msgid "Save"
-msgstr "Сохранить"
+msgstr ""
 
 #: templates/admin/edit_user.html:136
 msgid "Back"
-msgstr "Назад"
-
-#~ msgid "About"
-#~ msgstr "О журнале"
-
-#~ msgid "About the Journal"
-#~ msgstr "О журнале"
-
-#~ msgid ""
-#~ "Bulletin of the Commission for Study "
-#~ "of the Quaternary (BCSQ) (Rus. Бюллетень"
-#~ " Комиссии по изучению четвертичного периода"
-#~ " (БКИЧП), Fr. Bulletin de la "
-#~ "Commission pour l'Etude du Quaternaire) "
-#~ "– is an annual scientific publication"
-#~ " (serial title), publishing papers, "
-#~ "reviews, conference materials and a "
-#~ "chronicle about the Quaternary geological "
-#~ "period (the Quaternary System). The "
-#~ "Bulletin covers fundamental, global and "
-#~ "regional problems of the Quaternary "
-#~ "Science. Papers related to all aspects"
-#~ " of quaternary geology, stratigraphy, "
-#~ "geotectonic, sedimentology, paleontology, "
-#~ "paleogeography, geomorphology, permafrost study, "
-#~ "paleo soil study, archeology, etс. The"
-#~ " Bulletin is fully open access with"
-#~ " double-blind peer-reviewed "
-#~ "publications.<br><br>The Bulletin founded by "
-#~ "the Commission for the Study of "
-#~ "the Quaternary of the Academy of "
-#~ "Sciences of the USSR (1929) as a"
-#~ " professional academic publication. It is"
-#~ " the longest-running journal related "
-#~ "to the Quaternary research. There were"
-#~ " 1/3 releases of the Bulletin "
-#~ "published almost annually, 75 issues, "
-#~ "available in the online archive. The "
-#~ "founders of the bulletin are the "
-#~ "Commission for the Study of the "
-#~ "Quaternary Period of the Russian Academy"
-#~ " of Sciences (RAS) and the Geological"
-#~ " Institute RAS. The Bulletin is "
-#~ "included to the Russian Science Citation"
-#~ " Index (Elibrary) and is in a "
-#~ "process of registration to the "
-#~ "international bibliographic database (Scopus). "
-#~ "Printed by the GEOS Publishing House,"
-#~ " print ISSN 0366-0907, and library "
-#~ "heading: The Quaternary System.<br><br>The "
-#~ "editorial office is located in the "
-#~ "Geological Institute RAS, the Bulletin "
-#~ "website with information in Russian and"
-#~ " English. The editorial board includes "
-#~ "leading scientists; the chief editor is"
-#~ " the chairman of the Commission for"
-#~ " the Study of the Quaternary period"
-#~ " Dr. Yu.A. Lavrushin. Since 2018, "
-#~ "papers published with English summary, "
-#~ "keywords and bibliography, some articles "
-#~ "published in English with an expanded"
-#~ " Russian summary."
-#~ msgstr ""
-#~ "Бюллетень Комиссии по изучению четвертичного"
-#~ " периода (БКИЧП) — ежегодное научное "
-#~ "издание, публикующее статьи, обзоры, материалы"
-#~ " конференций и хронику, посвящённые "
-#~ "четвертичному геологическому периоду (Четвертичная"
-#~ " система). Бюллетень охватывает фундаментальные,"
-#~ " глобальные и региональные проблемы "
-#~ "четвертичной науки. Публикуются работы по "
-#~ "всем аспектам четвертичной геологии, "
-#~ "стратиграфии, геотектонике, седиментологии, "
-#~ "палеонтологии, палеогеографии, геоморфологии, "
-#~ "мерзлотоведению, изучению древних почв, "
-#~ "археологии и др. Бюллетень полностью "
-#~ "открыт для доступа, публикации проходят "
-#~ "двойное слепое рецензирование.<br><br>Бюллетень "
-#~ "основан Комиссией по изучению четвертичного"
-#~ " периода Академии наук СССР (1929) "
-#~ "как профессиональное академическое издание. "
-#~ "Это самый продолжительный журнал, связанный"
-#~ " с исследованиями четвертичного периода. "
-#~ "Было опубликовано 75 выпусков, доступных "
-#~ "в онлайн-архиве. Основатели — Комиссия "
-#~ "по изучению четвертичного периода РАН и"
-#~ " Геологический институт РАН. Бюллетень "
-#~ "включён в Российский индекс научного "
-#~ "цитирования (Elibrary) и находится в "
-#~ "процессе регистрации в международной "
-#~ "библиографической базе данных (Scopus). "
-#~ "Печатается издательством «ГЕОС», печатный ISSN"
-#~ " 0366-0907, рубрика: Четвертичная "
-#~ "система.<br><br>Редакция находится в Геологическом"
-#~ " институте РАН, сайт бюллетеня содержит "
-#~ "информацию на русском и английском "
-#~ "языках. В редакционный совет входят "
-#~ "ведущие учёные; главный редактор — "
-#~ "председатель Комиссии по изучению "
-#~ "четвертичного периода д-р Ю.А. Лаврушин. "
-#~ "С 2018 года статьи публикуются с "
-#~ "английским резюме, ключевыми словами и "
-#~ "библиографией, некоторые статьи публикуются на"
-#~ " английском языке с расширенным русским "
-#~ "резюме."
-
-#~ msgid "The Quaternary Period"
-#~ msgstr "Четвертичный период"
-
-#~ msgid ""
-#~ "The Quaternary period, or Anthropogene "
-#~ "(Quaternary system; Anthropogenic period; "
-#~ "Quaternary) is a geological period "
-#~ "(geological system), the modern stage of"
-#~ " the Earth's history, the third "
-#~ "(current) period of the Cenozoic era."
-#~ " It began 2.58 million years ago "
-#~ "and continues to this day."
-#~ msgstr ""
-#~ "Четвертичный период, или антропоген "
-#~ "(четвертичная система; антропогенный период; "
-#~ "четвертичный), — геологический период "
-#~ "(геологическая система), современный этап "
-#~ "истории Земли, третий (нынешний) период "
-#~ "кайнозойской эры. Начался 2,58 миллиона "
-#~ "лет назад и продолжается по настоящее"
-#~ " время."
-
-#~ msgid ""
-#~ "This is the shortest geological period,"
-#~ " but it was in the Quaternary "
-#~ "that most modern landforms were formed"
-#~ " in their modern form and many "
-#~ "significant events in the history of "
-#~ "the Earth (from the point of view"
-#~ " of man) occurred, the most important"
-#~ " of which are the glaciation periods"
-#~ " and the emergence of man. In "
-#~ "such a short time interval, radiocarbon"
-#~ " analysis and other methods based on"
-#~ " the decay of short-lived isotopes"
-#~ " are used primarily to determine age."
-#~ " The specificity of the Quaternary "
-#~ "period compared to other geological "
-#~ "periods created a special branch of "
-#~ "geology – Quaternary."
-#~ msgstr ""
-#~ "Это самый короткий геологический период, "
-#~ "но именно в четвертичном периоде "
-#~ "сформировались современные формы рельефа и "
-#~ "произошли многие значимые события в "
-#~ "истории Земли (с точки зрения человека),"
-#~ " важнейшие из которых — периоды "
-#~ "оледенения и появление человека. В столь"
-#~ " коротком временном интервале для "
-#~ "определения возраста преимущественно используются"
-#~ " радиоуглеродный анализ и другие методы,"
-#~ " основанные на распаде короткоживущих "
-#~ "изотопов. Специфика четвертичного периода по"
-#~ " сравнению с другими геологическими "
-#~ "периодами привела к возникновению особой "
-#~ "отрасли геологии — четвертичной науки."
-
-#~ msgid "Main editors"
-#~ msgstr "Главные редакторы"
-
-#~ msgid ""
-#~ "Дегтярёв Кирилл Евгеньевич — главный "
-#~ "редактор, председатель Комиссии по изучению"
-#~ " четвертичного периода"
-#~ msgstr ""
-
-#~ msgid "Тесаков Алексей Сергеевич — заместитель главного редатора"
-#~ msgstr ""
-
-#~ msgid "Фролов Павел Дмитриевич — учёный секретарь"
-#~ msgstr ""
-
-#~ msgid "Лаврушин Юрий Александрович — ГИН РАН"
-#~ msgstr ""
-
-#~ msgid "Панин Андрей Валерьевич — ИГ РАН"
-#~ msgstr ""
-
-#~ msgid "Застрожнов Андрей Станиславович — Институт Карпинского"
-#~ msgstr ""
-
-#~ msgid "Зыкин, Владимир Сергеевич — НГУ"
-#~ msgstr ""
-
-#~ msgid "Draženko Nenadić — Белградский университет"
-#~ msgstr ""
-
-#~ msgid "Thijs van Kolfschoten — Лейденский университет"
-#~ msgstr ""
-
-#~ msgid "Archive"
-#~ msgstr "Архив"
-
-#~ msgid "Authors"
-#~ msgstr "Авторы"
-
-#~ msgid "Editorial Board"
-#~ msgstr "Редакционная коллегия"
-
-#~ msgid "Profile"
-#~ msgstr "Профиль"
-
-#~ msgid "Login"
-#~ msgstr "Войти"
-
-#~ msgid "Account"
-#~ msgstr "Аккаунт"
-
-#~ msgid "Sign in"
-#~ msgstr "Войти"
-
-#~ msgid "My Publications"
-#~ msgstr "Мои публикации"
-
-#~ msgid "Admin Panel"
-#~ msgstr "Панель администратора"
-
-#~ msgid "Log out"
-#~ msgstr "Выйти"
-
-#~ msgid "Password"
-#~ msgstr "Пароль"
-
-#~ msgid "Forgot your password?"
-#~ msgstr "Забыли пароль?"
-
-#~ msgid "Register"
-#~ msgstr "Регистрация"
-
-#~ msgid "Bulletin of the Commission for Study of the Quaternary"
-#~ msgstr "Бюллетень Комиссии по изучению четвертичного периода"
-
-#~ msgid "Contact Us"
-#~ msgstr "Связаться с нами"
-
-#~ msgid "Geological Institute"
-#~ msgstr "Геологический институт"
-
-#~ msgid "Russian Academy of Sciences"
-#~ msgstr "Российская Академия Наук"
-
-#~ msgid "If you want to contact us, please send an email to"
-#~ msgstr "Если вы хотите связаться с нами, пожалуйста, отправьте письмо на"
-
-#~ msgid "Send Email"
-#~ msgstr "Отправить письмо"
-
-#~ msgid "Ethics"
-#~ msgstr "Этика"
-
-#~ msgid "Home"
-#~ msgstr "Главная"
-
-#~ msgid "RAS Geological Institute (GIN RAS)"
-#~ msgstr "Геологический институт РАН (ГИН РАН)"
-
-#~ msgid "View Latest Issue"
-#~ msgstr "Смотреть последнее издание"
-
-#~ msgid "No issues available yet."
-#~ msgstr "Издания пока недоступны."
-
-#~ msgid ""
-#~ "Bulletin of the Commission for Study "
-#~ "of the Quaternary (BCSQ) (Rus. Бюллетень"
-#~ " Комиссии по изучению четвертичного периода"
-#~ " (БКИЧП), Fr. Bulletin de la "
-#~ "Commission pour l'Etude du Quaternaire) "
-#~ "– is an annual scientific publication"
-#~ " (serial title), publishing papers, "
-#~ "reviews, conference materials and a "
-#~ "chronicle about the Quaternary geological "
-#~ "period (the Quaternary System). The "
-#~ "Bulletin covers fundamental, global and "
-#~ "regional problems of the Quaternary "
-#~ "Science. Papers related to all aspects"
-#~ " of quaternary geology, stratigraphy, "
-#~ "geotectonic, sedimentology, paleontology, "
-#~ "paleogeography, geomorphology, permafrost study, "
-#~ "paleo soil study, archeology, etс. The"
-#~ " Bulletin is fully open access with"
-#~ " double-blind peer-reviewed publications."
-#~ msgstr ""
-#~ "Бюллетень Комиссии по изучению четвертичного"
-#~ " периода (БКИЧП) — ежегодное научное "
-#~ "издание, публикующее статьи, обзоры, материалы"
-#~ " конференций и хронику, посвящённые "
-#~ "четвертичному геологическому периоду (Четвертичная"
-#~ " система). Бюллетень охватывает фундаментальные,"
-#~ " глобальные и региональные проблемы "
-#~ "четвертичной науки. Публикуются работы по "
-#~ "всем аспектам четвертичной геологии, "
-#~ "стратиграфии, геотектонике, седиментологии, "
-#~ "палеонтологии, палеогеографии, геоморфологии, "
-#~ "мерзлотоведению, изучению древних почв, "
-#~ "археологии и др. Бюллетень полностью "
-#~ "открыт для доступа, публикации проходят "
-#~ "двойное слепое рецензирование."
-
-#~ msgid "Аrchive"
-#~ msgstr "Архив"
-
-#~ msgid "Terms of Use"
-#~ msgstr "Правила"
-
-#~ msgid "Review Rules"
-#~ msgstr "Рецензирование"
-
-#~ msgid "Submit"
-#~ msgstr "Подать статью"
-
-#~ msgid "Contacts"
-#~ msgstr "Контакты"
-
-#~ msgid "License Agreement"
-#~ msgstr "Регистрации"
-
-#~ msgid "About Commission"
-#~ msgstr "О комиссии"
-
-#~ msgid ""
-#~ "The Commission for the Study of "
-#~ "the Quaternary Period of the Russian "
-#~ "Academy of Sciences organizes the "
-#~ "coordination of research and production "
-#~ "work carried out by organizations "
-#~ "associated with the study of the "
-#~ "Quaternary geological period. This is "
-#~ "done by convening conferences, meetings, "
-#~ "etc., as well as publishing the "
-#~ "latest materials in the Commission's "
-#~ "publications. In addition, direct contacts "
-#~ "and consultations are organized between "
-#~ "representatives of various specialties when"
-#~ " performing research work. Close ties "
-#~ "are maintained with the International "
-#~ "Union for the Study of the "
-#~ "Quaternary Period (INQUA)."
-#~ msgstr ""
-#~ "Комиссия по изучению четвертичного периода "
-#~ "Российской академии наук организует "
-#~ "координацию научных и производственных работ,"
-#~ " проводимых организациями, связанными с "
-#~ "изучением четвертичного геологического периода. "
-#~ "Это осуществляется путём проведения "
-#~ "конференций, совещаний и публикации новейших"
-#~ " материалов в изданиях комиссии. Кроме "
-#~ "того, организуются прямые контакты и "
-#~ "консультации между представителями различных "
-#~ "специальностей при выполнении научных работ."
-#~ " Поддерживаются тесные связи с "
-#~ "Международным союзом по изучению четвертичного"
-#~ " периода (INQUA)."
-
-#~ msgid ""
-#~ "A special feature of the Commission "
-#~ "is the involvement of specialists in "
-#~ "various fields in its work: geologists,"
-#~ " geographers, permafrost scientists, soil "
-#~ "scientists, archaeologists, paleontologists, "
-#~ "paleobotanists, specialists in physical "
-#~ "research methods, etc. The participation "
-#~ "of specialists in various fields, the"
-#~ " use of numerous methods, made it "
-#~ "possible to develop many fundamental "
-#~ "problems of the Quaternary period on "
-#~ "a multidisciplinary basis."
-#~ msgstr ""
-#~ "Особенностью работы комиссии является "
-#~ "привлечение специалистов различных областей: "
-#~ "геологов, географов, мерзлотоведов, почвоведов, "
-#~ "археологов, палеонтологов, палеоботаников, "
-#~ "специалистов по физическим методам "
-#~ "исследований и др. Участие специалистов "
-#~ "разных направлений и использование множества"
-#~ " методов позволили разработать многие "
-#~ "фундаментальные проблемы четвертичного периода "
-#~ "на междисциплинарной основе."
-
-#~ msgid "Year"
-#~ msgstr "Год"
-
-#~ msgid "View PDF"
-#~ msgstr "Открыть PDF"
-
-#~ msgid "Content of the Issue"
-#~ msgstr "Содержание выпуска"
-
-#~ msgid "Journal Registered:"
-#~ msgstr "Журнал зарегистрирован:"
-
-#~ msgid "Materials of the journal are available under the license:"
-#~ msgstr "Материалы журнала доступны по лицензии:"
-
-#~ msgid "Reset Password"
-#~ msgstr "Сбросить пароль"
-
-#~ msgid "Email Address"
-#~ msgstr "Адрес электронной почты"
-
-#~ msgid "Reset"
-#~ msgstr "Сбросить"
-
-#~ msgid "Your Profile"
-#~ msgstr "Ваш профиль"
-
-#~ msgid "Surname"
-#~ msgstr "Фамилия"
-
-#~ msgid "Surname (en)"
-#~ msgstr "Фамилия (en)"
-
-#~ msgid "Name"
-#~ msgstr "Имя"
-
-#~ msgid "Name (en)"
-#~ msgstr "Имя (en)"
-
-#~ msgid "Internet profile (URL)"
-#~ msgstr "Интернет-профиль (URL)"
-
-#~ msgid "Degrees held"
-#~ msgstr "Учёные степени"
-
-#~ msgid "Degrees held (en)"
-#~ msgstr "Учёные степени (en)"
-
-#~ msgid "Occupation (en)"
-#~ msgstr "Род занятий (en)"
-
-#~ msgid "Position, department, place of work"
-#~ msgstr "Должность, отдел, место работы"
-
-#~ msgid "Position, department, place of work (en)"
-#~ msgstr "Должность, отдел, место работы (en)"
-
-#~ msgid "Professional interests"
-#~ msgstr "Профессиональные интересы"
-
-#~ msgid "Professional interests (en)"
-#~ msgstr "Профессиональные интересы (en)"
-
-#~ msgid "City (en)"
-#~ msgstr "Город (en)"
-
-#~ msgid "Address (en)"
-#~ msgstr "Адрес (en)"
-
-#~ msgid "State/Province"
-#~ msgstr "Регион/область"
-
-#~ msgid "Save changes"
-#~ msgstr "Сохранить изменения"
-
-#~ msgid "Change password"
-#~ msgstr "Сменить пароль"
-
-#~ msgid "Confirm Password"
-#~ msgstr "Подтвердите пароль"
-
-#~ msgid "I agree to the processing of my personal data"
-#~ msgstr "Я согласен на обработку моих персональных данных"
-
-#~ msgid "I'm not a robot"
-#~ msgstr "Я не робот"
-
-#~ msgid "Submit Manuscript"
-#~ msgstr "Отправить рукопись"
-
-#~ msgid "Submit Your Manuscript"
-#~ msgstr "Отправить вашу рукопись"
-
-#~ msgid "To submit your manuscript, please email it in DOCX or PDF format to:"
-#~ msgstr ""
-#~ "Чтобы отправить рукопись, пожалуйста, пришлите"
-#~ " её на электронную почту в формате"
-#~ " DOCX или PDF:"
-
-#~ msgid "Please make sure your manuscript follows the author guidelines."
-#~ msgstr ""
-#~ "Пожалуйста, убедитесь, что ваша рукопись "
-#~ "соответствует правилам для авторов."
-
-#~ msgid "Download Author Guidelines"
-#~ msgstr "Скачать правила для авторов"
-
-#~ msgid "Download PDF"
-#~ msgstr "Скачать PDF"
+msgstr ""
 

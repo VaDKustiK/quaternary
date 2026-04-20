@@ -1,8 +1,8 @@
 import os
 from flask import Flask, render_template, request, redirect, url_for, flash, abort
 from flask_babel import Babel
-from sqlalchemy.orm import Session
-from tools.models.init_db import engine, SessionLocal, init_db
+# from sqlalchemy.orm import Session
+from tools.models.init_db import SessionLocal, init_db
 from tools.models.issue import Issue
 from werkzeug.security import generate_password_hash
 from tools.models.user import User
@@ -25,6 +25,7 @@ app.config['BABEL_SUPPORTED_LOCALES'] = ['en', 'ru']
 
 babel = Babel()
 
+
 def get_locale():
     if "lang" in session:
         return session["lang"]
@@ -33,11 +34,13 @@ def get_locale():
     if lang in app.config['BABEL_SUPPORTED_LOCALES']:
         session["lang"] = lang
         return lang
-    
+
     # return request.accept_languages.best_match(app.config['BABEL_SUPPORTED_LOCALES'])
     return 'ru'
 
+
 babel.init_app(app, locale_selector=get_locale)
+
 
 @app.context_processor
 def inject_locale():
@@ -52,6 +55,7 @@ def set_language(lang):
 
 
 init_db()  # creating tables once before running the app
+
 
 def admin_required(f):
     @wraps(f)
@@ -242,6 +246,7 @@ def authors():
 def submit():
     return render_template("submit.html")
 
+
 @app.route("/license")
 def license_page():
     return render_template("license.html")
@@ -284,15 +289,15 @@ def admin_users():
 
     if q:
         query = query.filter(
-            (User.name.ilike(f"%{q}%")) |
-            (User.surname.ilike(f"%{q}%")) |
-            (User.email.ilike(f"%{q}%"))
+            (User.name.ilike(f"%{q}%"))
+            | (User.surname.ilike(f"%{q}%"))
+            | (User.email.ilike(f"%{q}%"))
         )
 
     if filter_admin == "true":
-        query = query.filter(User.is_admin == True)
+        query = query.filter(User.is_admin.is_(True))
     elif filter_admin == "false":
-        query = query.filter(User.is_admin == False)
+        query = query.filter(User.is_admin.is_(False))
 
     if sort == "oldest":
         query = query.order_by(User.created_at.asc())
