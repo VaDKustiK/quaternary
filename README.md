@@ -1,106 +1,134 @@
-# Bulletin of the Commission for Study of the Quaternary (BCSQ)
+# Бюллетень Комиссии по изучению четвертичного периода (BCSQ)
 
-**Live Website:** [https://quaternary.ru/](https://quaternary.ru/)
-**Repository:** `https://github.com/VaDKustiK/quaternary`
-**Branch:** `dev`
+**Действующий сайт:** [https://quaternary.ru/](https://quaternary.ru/)
+**Репозиторий:** `https://github.com/VaDKustiK/quaternary`
+**Ветка:** `dev`
 
----
 
-## Overview
-
-The **Quaternary Journal Web Portal** is a modern web application built for the *Bulletin of the Commission for Study of the Quaternary* — an academic journal of the **Russian Academy of Sciences (RAS)**.
-It serves as a digital platform for publishing and accessing scientific issues, editorial board information, author submissions, and licensing documentation.
-
-The project aims to provide a clean, multilingual, and accessible interface for both readers and contributors of the *Bulletin of the Commission for Study of the Quaternary*.
+This is the russian version of the README. You can read the english version [here](README_en.md)
 
 ---
 
-## Main Features
+## Обзор
 
-### Journal Archive
+**Портал Бюллетеня Комиссии по изучению четвертичного периода** — это современное веб-приложение, созданное для *Бюллетеня Комиссии по изучению четвертичного периода* — научного журнала **Российской академии наук (РАН)**.
+Оно служит цифровой платформой для публикации и просмотра научных выпусков, информации о редакционной коллегии, подачи материалов авторами и документов, связанных с лицензированием.
 
-* Dynamic archive of all journal issues grouped by year.
-* Each issue links directly to its PDF publication.
-* Accordion layout for easy navigation.
-
-### Author Directory
-
-* Automatically scraped and updated author database.
-* Each author page lists only their own published works (linked to issue PDFs).
-* Powered by the `author_scraper.py` script using BeautifulSoup and SQLAlchemy.
-
-### Editorial Board
-
-* Complete list of editors and institutions.
-* Presented in a card-based layout with sidebar navigation.
-
-### License Agreement & Terms of Use
-
-* Interactive PDF viewer embedded directly on the page.
-* Downloadable version available for offline reference.
-
-### Manuscript Submission
-
-* Dedicated “Submit” page with email-based submission system.
-* Instructions for authors on manuscript preparation.
-
-### Multilingual Support (Flask-Babel)
-
-* Seamless internationalization with English and Russian translations.
-
-### Responsive Design
-
-* Built with **Bootstrap 5**, ensuring accessibility and consistency across devices.
+Проект нацелен на создание чистого, мультиязычного и доступного интерфейса как для читателей, так и для авторов *Бюллетеня Комиссии по изучению четвертичного периода*.
 
 ---
 
-## Technology Stack
+## Основные возможности
 
-| Layer            | Technology                                       |
-| ---------------- | ------------------------------------------------ |
-| **Backend**      | Flask (Python)                                   |
-| **Frontend**     | HTML5, CSS3, Bootstrap 5, Jinja2                 |
-| **Database**     | SQLite (local), SQLAlchemy ORM                   |
-| **Localization** | Flask-Babel                                      |
-| **Scraping**     | Requests, BeautifulSoup4                         |
-| **Hosting**      | [https://quaternary.ru/](https://quaternary.ru/) |
+### Архив журнала
+
+* Динамический архив всех выпусков журнала, сгруппированных по годам.
+* Каждый выпуск ведёт напрямую к своему PDF-файлу.
+* Аккордеон-структура для удобной навигации.
+
+### Каталог авторов
+
+* Автоматически собираемая и обновляемая база авторов.
+* На странице каждого автора отображаются только его опубликованные работы (со ссылками на PDF выпусков).
+* Работает на скрипте `author_scraper.py` с использованием BeautifulSoup и SQLAlchemy.
+
+### Редакционная коллегия
+
+* Полный список редакторов и организаций.
+* Представлено в виде карточек с боковой навигацией.
+
+### Лицензионное соглашение и условия использования
+
+* Интерактивный PDF-просмотрщик, встроенный прямо на страницу.
+* Доступна версия для скачивания и офлайн-использования.
+
+### Подача рукописей
+
+* Отдельная страница «Submit» с системой подачи по электронной почте.
+* Инструкции для авторов по подготовке рукописей.
+
+### Мультиязычная поддержка (Flask-Babel)
+
+* Плавная интернационализация с русскими шаблонами-источниками и английскими переводами.
+
+### Адаптивный дизайн
+
+* Построен на **Bootstrap 5**, что обеспечивает доступность и единообразие на разных устройствах.
 
 ---
 
-## How It Works
+## Технологический стек
+
+| Слой            | Технология                                      |
+| ---------------- | ----------------------------------------------- |
+| **Backend**     | Flask (Python)                                  |
+| **Frontend**    | HTML5, CSS3, Bootstrap 5, Jinja2                 |
+| **База данных** | SQLite (локально), SQLAlchemy ORM                |
+| **Локализация** | Flask-Babel                                      |
+| **Парсинг**     | Requests, BeautifulSoup4                         |
+| **Хостинг**     | [https://quaternary.ru/](https://quaternary.ru/) |
+
+---
+
+## Как это работает
 
 1. **Backend**:
-   Flask serves as the main framework handling routing, rendering templates, and localization.
+   Flask выступает основным фреймворком для обработки маршрутов, рендеринга шаблонов и локализации.
 
-2. **Database Initialization**:
-   The `tools/models/` directory defines ORM models for `Author`, `Article`, and related entities.
+2. **Инициализация базы данных**:
+   Каталог `tools/models/` содержит ORM-модели для `Author`, `Article` и связанных сущностей.
 
-3. **Data Scraping**:
-   `author_scraper.py` and `archive_scraper.py` scripts fetch the list of authors and publications directly from the GIN RAS website using BeautifulSoup.
-
-   ```bash
-   python -m tools.author_scraper # or tools.archive_scraper
-   ```
-
-4. **Templates**:
-   The Jinja2 templates use a base layout (`base.html`) and structured sidebar includes for consistent design across all pages.
-
-5. **Localization (Babel)**:
-   Translation files (`messages.po`, `messages.mo`) are stored under `translations/`.
-   Use:
+3. **Сбор данных**:
+   Скрипты `author_scraper.py` и `archive_scraper.py` получают список авторов и публикаций напрямую с сайта ГИН РАН с помощью BeautifulSoup.
 
    ```bash
-   flask babel extract -F babel.cfg -o messages.pot .
-   flask babel update -i messages.pot -d translations
-   flask babel compile -d translations
+   python -m tools.author_scraper # или tools.archive_scraper
    ```
 
-6. **Hosting**:
-   The live version is hosted at [quaternary.ru](https://quaternary.ru/).
+4. **Шаблоны**:
+   Шаблоны Jinja2 используют базовый макет (`base.html`) и структурированные боковые включения для единообразного оформления всех страниц.
+
+5. **Обновление PDF-файлов**:
+   Чтобы заменить существующий PDF:
+
+   1. Перейдите в `./static/pdf`.
+   2. Поместите туда обновлённый PDF-файл.
+   3. Скопируйте имя файла PDF, который нужно заменить, например `terms_of_use_quaternary.pdf`.
+   4. Удалите устаревший PDF.
+   5. Переименуйте новый PDF так, чтобы он использовал то же имя, что и старый файл.
+
+   Если удобнее обновить ссылку на странице, перейдите в `./templates/`, найдите страницу, где подключён PDF, и при необходимости измените имя файла там.
+
+6. **Локализация (Babel)**:
+   Рабочий процесс перевода односторонний: русский текст является источником, а английский поддерживается как перевод.
+
+   Файлы переводов хранятся в `translations/`, а английские строки находятся в `translations/en/LC_MESSAGES/messages.po`.
+
+   Когда вы добавляете или изменяете переводимый текст, следуйте такой последовательности:
+
+   1. Отредактируйте русский текст в шаблонах.
+   2. Извлеките и обновите сообщения перевода:
+
+      ```bash
+      pybabel extract -F babel.cfg -o messages.pot .
+      pybabel update -i messages.pot -d translations
+      ```
+
+   3. Добавьте новые английские переводы в `translations/en/LC_MESSAGES/messages.po`.
+   4. Скомпилируйте каталог переводов:
+
+      ```bash
+      pybabel compile -d translations
+      ```
+
+   Повторяйте этот процесс каждый раз, когда меняется текст в шаблонах, чтобы английская версия оставалась синхронизированной с русским источником.
+
+7. **Хостинг**:
+   Действующая версия размещена на [quaternary.ru](https://quaternary.ru/).
 
 ---
 
-## License
+## Лицензия
 
-This project and website are part of the **Bulletin of the Commission for Study of the Quaternary (RAS)** digital modernization initiative.
-© Geological Institute RAS, 2025. All rights reserved.
+Этот проект и веб-сайт являются частью инициативы по цифровой модернизации **Бюллетеня Комиссии по изучению четвертичного периода (РАН)**.
+© Геологический Институт РАН (ГИН РАН), 2025. Все права защищены.
